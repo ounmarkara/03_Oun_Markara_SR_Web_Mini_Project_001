@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeatBay - Ed Sheeran</title>
+    <title>BeatBay - Music</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <script>
@@ -25,12 +25,16 @@
 </head>
 
 <body class="bg-background text-white h-screen flex flex-col">
+
     <!-- Main Container -->
+
     <div class="flex-1 flex overflow-hidden">
         <!-- Sidebar -->
+
+
         <aside class="w-60 border-r border-white/10 flex flex-col">
             <div class="p-6">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HRD_Music_Stream-tDTFlcAJyDnOGZdkU5MBwD8cFVhww6.png"
+                <img src="./img/Logo.jpg"
                     alt="BeatBay Logo" class="h-8 mb-8">
                 <nav class="space-y-2">
                     <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-md bg-white/10">
@@ -40,6 +44,14 @@
                     <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white/10">
                         <i class="ri-compass-3-line text-xl text-muted"></i>
                         <span class="text-muted">Discover</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white/10">
+                        <i class="ri-radio-2-line text-xl text-muted"></i>
+                        <span class="text-muted">Radio</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white/10">
+                        <i class="ri-radio-2-line text-xl text-muted"></i>
+                        <span class="text-muted">Radio</span>
                     </a>
                     <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white/10">
                         <i class="ri-radio-2-line text-xl text-muted"></i>
@@ -59,6 +71,10 @@
                         <i class="ri-heart-line text-xl text-muted"></i>
                         <span class="text-muted">Favorite Songs</span>
                     </a>
+                    <a href="#" class="flex items-center gap-3 px-6 py-2 hover:bg-white/10">
+                        <i class="ri-heart-line text-xl text-muted"></i>
+                        <span class="text-muted">Favorite Songs</span>
+                    </a>
                 </nav>
             </div>
 
@@ -69,14 +85,24 @@
                         <i class="ri-music-line text-xl text-muted"></i>
                         <span class="text-muted">Lo-fi Music</span>
                     </a>
+                    <a href="#" class="flex items-center gap-3 px-6 py-2 hover:bg-white/10">
+                        <i class="ri-music-line text-xl text-muted"></i>
+                        <span class="text-muted">Lo-fi Music</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-6 py-2 hover:bg-white/10">
+                        <i class="ri-music-line text-xl text-muted"></i>
+                        <span class="text-muted">Lo-fi Music</span>
+                    </a>
                 </nav>
             </div>
         </aside>
 
         <!-- Main Content -->
         <main class="flex-1 overflow-y-auto">
+
+
             <!-- Header -->
-            <header class="h-16 flex items-center gap-4 px-6 sticky top-0 bg-background/90 backdrop-blur-sm z-10">
+            <header  class="h-16 flex items-center gap-4 px-6 sticky top-0 bg-background/90 backdrop-blur-sm z-10">
                 <div class="flex items-center gap-2">
                     <button class="p-2 rounded-full hover:bg-white/10">
                         <i class="ri-arrow-left-s-line text-xl"></i>
@@ -96,18 +122,14 @@
                     <button class="p-2 rounded-full hover:bg-white/10">
                         <i class="ri-notification-line text-xl"></i>
                     </button>
-                    <div class="flex items-center gap-2">
-                        <img src="/placeholder.svg?height=32&width=32" alt="Profile" class="w-8 h-8 rounded-full">
-                        <span>James Rodriguez</span>
-                        <i class="ri-arrow-down-s-line"></i>
-                    </div>
                 </div>
             </header>
 
             <!-- Artist Header -->
-            <div class="relative h-[350px] bg-gradient-to-b from-[#1a1a1a] to-background px-6 pt-6">
-                <div class="flex items-start gap-4">
-                    <div class="flex-1">
+            <div class="relative h-[350px] bg-gradient-to-b from-[#1a1a1a] to-background px-6 pt-6 flex items-center gap-6" style="background-image: url('./img/background.png')">
+                <!-- Left Side: Content -->
+                <div class="flex-1 flex justify-center">
+                    <div>
                         <div class="flex items-center gap-2 mb-4">
                             <i class="ri-verified-badge-fill text-[#1DA1F2]"></i>
                             <span>Verified Artist</span>
@@ -117,18 +139,24 @@
                             <i class="ri-headphone-line"></i>
                             <span>82,736,050 monthly listeners</span>
                         </div>
+                        <div class="flex gap-4 mt-8">
+                            <button class="px-8 py-3 rounded-full bg-accent hover:bg-accent/90">
+                                PLAY
+                            </button>
+                            <button class="px-8 py-3 rounded-full border border-white hover:bg-white/10">
+                                FOLLOWING
+                            </button>
+                        </div>
                     </div>
                 </div>
-
-                <div class="flex gap-4 mt-8">
-                    <button class="px-8 py-3 rounded-full bg-accent hover:bg-accent/90">
-                        PLAY
-                    </button>
-                    <button class="px-8 py-3 rounded-full border border-white hover:bg-white/10">
-                        FOLLOWING
-                    </button>
+            
+                <!-- Right Side: Image -->
+                <div class="flex-1 flex justify-center">
+                    <img  src="./img/edensharen.png" alt="Ed Sheeran" class="h-[300px] w-[300px] object-cover rounded-lg">
                 </div>
             </div>
+            
+            
 
             <!-- Popular Releases -->
             <section class="px-6 py-8">
@@ -138,9 +166,10 @@
                 </div>
 
                 <div class="grid grid-cols-6 gap-6">
+
                     <div class="group cursor-pointer">
                         <div class="aspect-square bg-card rounded-md mb-3 overflow-hidden relative">
-                            <img src="/placeholder.svg?height=200&width=200" alt="÷ (Divide)"
+                            <img src="./img/img-song1.png" alt="÷ (Divide)"
                                 class="w-full h-full object-cover">
                             <button
                                 class="absolute bottom-2 right-2 w-10 h-10 rounded-full bg-accent text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -150,7 +179,73 @@
                         <h3 class="font-medium mb-1">÷ (Divide)</h3>
                         <p class="text-sm text-muted">2017 • Album</p>
                     </div>
-                    <!-- Repeat for other albums -->
+
+                    <div class="group cursor-pointer">
+                        <div class="aspect-square bg-card rounded-md mb-3 overflow-hidden relative">
+                            <img src="./img/img-song2.png" alt="÷ (Divide)"
+                                class="w-full h-full object-cover">
+                            <button
+                                class="absolute bottom-2 right-2 w-10 h-10 rounded-full bg-accent text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                                <i class="ri-play-fill text-xl"></i>
+                            </button>
+                        </div>
+                        <h3 class="font-medium mb-1">÷ (Divide)</h3>
+                        <p class="text-sm text-muted">2017 • Album</p>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="aspect-square bg-card rounded-md mb-3 overflow-hidden relative">
+                            <img src="./img/img-song3.png" alt="÷ (Divide)"
+                                class="w-full h-full object-cover">
+                            <button
+                                class="absolute bottom-2 right-2 w-10 h-10 rounded-full bg-accent text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                                <i class="ri-play-fill text-xl"></i>
+                            </button>
+                        </div>
+                        <h3 class="font-medium mb-1">÷ (Divide)</h3>
+                        <p class="text-sm text-muted">2017 • Album</p>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="aspect-square bg-card rounded-md mb-3 overflow-hidden relative">
+                            <img src="./img/img-song4.png" alt="÷ (Divide)"
+                                class="w-full h-full object-cover">
+                            <button
+                                class="absolute bottom-2 right-2 w-10 h-10 rounded-full bg-accent text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                                <i class="ri-play-fill text-xl"></i>
+                            </button>
+                        </div>
+                        <h3 class="font-medium mb-1">÷ (Divide)</h3>
+                        <p class="text-sm text-muted">2017 • Album</p>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="aspect-square bg-card rounded-md mb-3 overflow-hidden relative">
+                            <img src="./img/img-song5.png" alt="÷ (Divide)"
+                                class="w-full h-full object-cover">
+                            <button
+                                class="absolute bottom-2 right-2 w-10 h-10 rounded-full bg-accent text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                                <i class="ri-play-fill text-xl"></i>
+                            </button>
+                        </div>
+                        <h3 class="font-medium mb-1">÷ (Divide)</h3>
+                        <p class="text-sm text-muted">2017 • Album</p>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="aspect-square bg-card rounded-md mb-3 overflow-hidden relative">
+                            <img src="./img/img-song6.png" alt="÷ (Divide)"
+                                class="w-full h-full object-cover">
+                            <button
+                                class="absolute bottom-2 right-2 w-10 h-10 rounded-full bg-accent text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                                <i class="ri-play-fill text-xl"></i>
+                            </button>
+                        </div>
+                        <h3 class="font-medium mb-1">÷ (Divide)</h3>
+                        <p class="text-sm text-muted">2017 • Album</p>
+                    </div>
+
+
                 </div>
             </section>
 
@@ -160,7 +255,61 @@
                 <div class="space-y-2">
                     <div class="flex items-center gap-4 p-2 rounded hover:bg-white/10">
                         <span class="w-6 text-muted">1</span>
-                        <img src="/placeholder.svg?height=40&width=40" alt="Shiver" class="w-10 h-10 rounded">
+                        <img src="./img/img-song1.png" alt="Shiver" class="w-10 h-10 rounded">
+                        <div class="flex-1">
+                            <h3 class="font-medium">Shiver</h3>
+                        </div>
+                        <div class="flex items-center gap-4 text-muted">
+                            <span>1,952,015,881</span>
+                            <span>3:27</span>
+                            <button class="hover:text-white">
+                                <i class="ri-heart-line"></i>
+                            </button>
+                            <button class="hover:text-white">
+                                <i class="ri-more-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 p-2 rounded hover:bg-white/10">
+                        <span class="w-6 text-muted">1</span>
+                        <img src="./img/img-song2.png" alt="Shiver" class="w-10 h-10 rounded">
+                        <div class="flex-1">
+                            <h3 class="font-medium">Shiver</h3>
+                        </div>
+                        <div class="flex items-center gap-4 text-muted">
+                            <span>1,952,015,881</span>
+                            <span>3:27</span>
+                            <button class="hover:text-white">
+                                <i class="ri-heart-line"></i>
+                            </button>
+                            <button class="hover:text-white">
+                                <i class="ri-more-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 p-2 rounded hover:bg-white/10">
+                        <span class="w-6 text-muted">1</span>
+                        <img src="./img/img-song3.png" alt="Shiver" class="w-10 h-10 rounded">
+                        <div class="flex-1">
+                            <h3 class="font-medium">Shiver</h3>
+                        </div>
+                        <div class="flex items-center gap-4 text-muted">
+                            <span>1,952,015,881</span>
+                            <span>3:27</span>
+                            <button class="hover:text-white">
+                                <i class="ri-heart-line"></i>
+                            </button>
+                            <button class="hover:text-white">
+                                <i class="ri-more-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 p-2 rounded hover:bg-white/10">
+                        <span class="w-6 text-muted">1</span>
+                        <img src="./img/img-song5.png" alt="Shiver" class="w-10 h-10 rounded">
                         <div class="flex-1">
                             <h3 class="font-medium">Shiver</h3>
                         </div>
@@ -182,27 +331,161 @@
 
         <!-- Right Sidebar -->
         <aside class="w-80 border-l border-white/10 p-6">
-            <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-2 mb-6">
+                <div class='flex items-center justify-center space-x-4'>
+                    <img class='w-10 h-10 rounded-full' src='./img/img defualt album.png' alt='Media rounded avatar'>
+                    <div class='font-medium'>
+                    <h5 class='text-base font-semibold text-white-500'>Team No Money</h5>
+                    <span class='text-sm text-gray-500'>Premium</span>
+                    <span class='text-sm text-gray-500'>.</span>
+                    <span>👑</span>
+
+                    </div>
+                    </div>
+            </div>
+            <div class="flex items-center justify-between mb-6 ">
                 <h3 class="font-semibold">Fans Also Like</h3>
                 <a href="#" class="text-sm text-accent hover:underline">See All</a>
             </div>
 
             <div class="space-y-4">
-                <div class="bg-card rounded-lg p-4 flex gap-4">
-                    <img src="/placeholder.svg?height=80&width=80" alt="James Arthur" class="w-20 h-20 rounded-md">
-                    <div>
-                        <h4 class="font-medium">James Arthur</h4>
-                        <p class="text-sm text-muted">Artist</p>
+                <article class="relative bg-black text-white w-72 rounded-lg p-4 shadow-lg overflow-hidden">
+                    <!-- Image -->
+                    <div class="relative z-10">
+                        <img src="./img/img defualt album.png" alt="James Arthur" 
+                             class="w-full h-60 object-cover rounded-lg">
                     </div>
-                </div>
+            
+                    <!-- Content -->
+                    <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black via-black/80 to-transparent z-20">
+                        <h3 class="text-xl font-semibold">James Arthur</h3>
+                        <p class="text-gray-400">Artist</p>
+                    </div>
+                </article>
             </div>
+
+                <div class="flex items-center justify-between mb-2 gap-4">
+                  <h2 class="font-semibold">Recent Played</h2>
+                  <button class="inline-flex items-center gap-2 text-sm font-medium underline-offset-4 hover:underline h-10 px-4 py-2 text-[#1db954]">
+                    See All
+                  </button>
+                </div>
+                
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
+                    <div class="flex items-center gap-3">
+                      <img src="./img/recentplayimg1.png" alt="Perfect" class="rounded w-10 h-10">
+                      <div>
+                        <div class="font-medium">Perfect</div>
+                        <div class="text-sm text-[#949494]">Ed Sheeran</div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                      <span class="text-sm text-[#949494]">2min ago</span>                    
+                    </div>
+                  </div>
+
+                  <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
+                    <div class="flex items-center gap-3">
+                      <img src="./img/recentplayimg3.png" alt="Perfect" class="rounded w-10 h-10">
+                      <div>
+                        <div class="font-medium">Perfect</div>
+                        <div class="text-sm text-[#949494]">Ed Sheeran</div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                      <span class="text-sm text-[#949494]">2min ago</span>                    
+                    </div>
+                  </div>
+
+                  <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
+                    <div class="flex items-center gap-3">
+                      <img src="./img/recentplayimg4.png" alt="Perfect" class="rounded w-10 h-10">
+                      <div>
+                        <div class="font-medium">Perfect</div>
+                        <div class="text-sm text-[#949494]">Ed Sheeran</div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                      <span class="text-sm text-[#949494]">2min ago</span>                    
+                    </div>
+                  </div>
+
+                  <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
+                    <div class="flex items-center gap-3">
+                      <img src="./img/recentplayimg5.png" alt="Perfect" class="rounded w-10 h-10">
+                      <div>
+                        <div class="font-medium">Perfect</div>
+                        <div class="text-sm text-[#949494]">Ed Sheeran</div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                      <span class="text-sm text-[#949494]">2min ago</span>                    
+                    </div>
+                  </div>
+
+                  <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
+                    <div class="flex items-center gap-3">
+                      <img src="./img/recentplayimg5.png" alt="Perfect" class="rounded w-10 h-10">
+                      <div>
+                        <div class="font-medium">Perfect</div>
+                        <div class="text-sm text-[#949494]">Ed Sheeran</div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                      <span class="text-sm text-[#949494]">2min ago</span>                    
+                    </div>
+                  </div>
+
+                  <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
+                    <div class="flex items-center gap-3">
+                      <img src="./img/recentplayimg6.png" alt="Perfect" class="rounded w-10 h-10">
+                      <div>
+                        <div class="font-medium">Perfect</div>
+                        <div class="text-sm text-[#949494]">Ed Sheeran</div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                      <span class="text-sm text-[#949494]">2min ago</span>                    
+                    </div>
+                  </div>
+
+                  <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
+                    <div class="flex items-center gap-3">
+                      <img src="./img/recentplayimg7.png" alt="Perfect" class="rounded w-10 h-10">
+                      <div>
+                        <div class="font-medium">Perfect</div>
+                        <div class="text-sm text-[#949494]">Ed Sheeran</div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                      <span class="text-sm text-[#949494]">2min ago</span>                    
+                    </div>
+                  </div>
+                  
+                  <!-- Repeat for Other Songs -->
+                  <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
+                    <div class="flex items-center gap-3">
+                      <img src="./img/recentplayingimg2.png" alt="Shape of You" class="rounded w-10 h-10">
+                      <div>
+                        <div class="font-medium">Shape of You</div>
+                        <div class="text-sm text-[#949494]">Ed Sheeran</div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                      <span class="text-sm text-[#949494]">14hr ago</span>                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
         </aside>
     </div>
 
     <!-- Player Bar -->
     <footer class="h-20 border-t border-white/10 px-4 flex items-center gap-4 bg-card">
         <div class="flex items-center gap-4">
-            <img src="/placeholder.svg?height=56&width=56" alt="Shape of You" class="w-14 h-14 rounded">
+            <img src="./img/img-song1.png" alt="Shape of You" class="w-14 h-14 rounded">
             <div>
                 <h4 class="font-medium">Shape of You</h4>
                 <p class="text-sm text-muted">Ed Sheeran</p>
