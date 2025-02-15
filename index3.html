@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Stream</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#121212',
+                        surface: '#181818',
+                        primary: '#1DB954',
+                        secondary: '#b3b3b3',
+                        'surface-low': '#282828',
+                    }
+                }
+            }
+        }
+    </script>
+
 </head>
 
 <body class="bg-[#121212] text-white">
@@ -92,7 +110,7 @@
                 <div class="flex-1 relative">
                     <i class="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-muted"></i>
                     <input type="text" placeholder="Search music, artist, albums..."
-                        class="w-full max-w-md h-10 pl-10 pr-4 rounded-full bg-card text-sm text-white placeholder:text-muted">
+                        class="w-full max-w-md h-10 pl-10 pr-4 rounded-full bg-black text-sm text-white placeholder:text-muted">
                 </div>
 
                 <div class="flex items-center gap-4">
