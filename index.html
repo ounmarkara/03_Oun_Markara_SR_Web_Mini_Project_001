@@ -24,20 +24,22 @@
             }
         }
     </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+    </style>
 
 </head>
 
-<body class="bg-background text-white h-screen flex flex-col">
+<body class="font-manrope bg-background text-white h-screen flex flex-col">
 
     <!-- Main Container -->
 
-    <div class="flex-1 flex overflow-hidden">
+    <div class="flex-1 flex overflow-hidden ">
         <!-- Sidebar -->
 
-        <aside class="w-60 border-r border-white/10 flex flex-col">
+        <aside class="w-60 border-r border-white/10 flex flex-col ">
             <div class="p-6">
-                <img src="./asset/Logo.png"
-                    alt="BeatBay Logo" class="h-8 mb-8">
+                <img src="./asset/Logo.png" alt="BeatBay Logo" class="h-8 mb-8">
                 <nav class="space-y-2">
                     <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-md bg-white/10">
                         <i class="ri-home-line text-xl text-accent"></i>
@@ -100,35 +102,36 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 overflow-y-auto">
+        <main class="flex-1 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none]">
 
 
             <!-- Header -->
-            <header  class="h-16 flex items-center gap-4 px-6 sticky top-0 bg-background/90 backdrop-blur-sm z-10">
+            <header class="h-16 flex items-center gap-20 px-6 sticky top-0 bg-background/90 backdrop-blur-sm z-10">
                 <div class="flex items-center gap-2">
                     <button class="p-2 rounded-full hover:bg-white/10">
                         <i class="ri-arrow-left-s-line text-xl"></i>
                     </button>
+                    <p>Home</p>
                     <button class="p-2 rounded-full hover:bg-white/10">
                         <i class="ri-arrow-right-s-line text-xl"></i>
                     </button>
+                    <p>Popular Artist</p>
                 </div>
 
                 <div class="flex-1 relative">
                     <i class="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-muted"></i>
                     <input type="text" placeholder="Search music, artist, albums..."
                         class="w-full max-w-md h-10 pl-10 pr-4 rounded-full bg-card text-sm text-white placeholder:text-muted">
-                </div>
-
-                <div class="flex items-center gap-4">
                     <button class="p-2 rounded-full hover:bg-white/10">
                         <i class="ri-notification-line text-xl"></i>
                     </button>
                 </div>
+
             </header>
 
             <!-- Artist Header -->
-            <div class="relative h-[350px] bg-gradient-to-b from-[#1a1a1a] to-background px-6 pt-6 flex items-center gap-6" style="background-image: url('./asset/background.png')">
+            <div class="relative h-[350px] bg-gradient-to-b from-[#1a1a1a] to-background px-6 pt-6 flex items-center gap-6"
+                style="background-image: url('./asset/background.png')">
                 <!-- Left Side: Content -->
                 <div class="flex-1 flex justify-center">
                     <div>
@@ -151,14 +154,15 @@
                         </div>
                     </div>
                 </div>
-            
+
                 <!-- Right Side: Image -->
                 <div class="flex-1 flex justify-center">
-                    <img  src="./asset/edensharen.png" alt="Ed Sheeran" class="h-[300px] w-[300px] object-cover rounded-lg">
+                    <img src="./asset/edensharen.png" alt="Ed Sheeran"
+                        class="h-[300px] w-[300px] object-cover rounded-lg">
                 </div>
             </div>
-            
-            
+
+
 
             <!-- Popular Releases -->
             <section class="px-6 py-8">
@@ -171,8 +175,7 @@
 
                     <div class="group cursor-pointer">
                         <div class="aspect-square bg-card rounded-md mb-3 overflow-hidden relative">
-                            <img src="./asset/img-song1.png" alt="÷ (Divide)"
-                                class="w-full h-full object-cover">
+                            <img src="./asset/img-song1.png" alt="÷ (Divide)" class="w-full h-full object-cover">
                             <button
                                 class="absolute bottom-2 right-2 w-10 h-10 rounded-full bg-accent text-white opacity-0 group-hover:opacity-100 transition-opacity">
                                 <i class="ri-play-fill text-xl"></i>
@@ -184,8 +187,7 @@
 
                     <div class="group cursor-pointer">
                         <div class="aspect-square bg-card rounded-md mb-3 overflow-hidden relative">
-                            <img src="./asset/img-song2.png" alt="÷ (Divide)"
-                                class="w-full h-full object-cover">
+                            <img src="./asset/img-song2.png" alt="÷ (Divide)" class="w-full h-full object-cover">
                             <button
                                 class="absolute bottom-2 right-2 w-10 h-10 rounded-full bg-accent text-white opacity-0 group-hover:opacity-100 transition-opacity">
                                 <i class="ri-play-fill text-xl"></i>
@@ -197,8 +199,7 @@
 
                     <div class="group cursor-pointer">
                         <div class="aspect-square bg-card rounded-md mb-3 overflow-hidden relative">
-                            <img src="./asset/img-song3.png" alt="÷ (Divide)"
-                                class="w-full h-full object-cover">
+                            <img src="./asset/img-song3.png" alt="÷ (Divide)" class="w-full h-full object-cover">
                             <button
                                 class="absolute bottom-2 right-2 w-10 h-10 rounded-full bg-accent text-white opacity-0 group-hover:opacity-100 transition-opacity">
                                 <i class="ri-play-fill text-xl"></i>
@@ -210,8 +211,7 @@
 
                     <div class="group cursor-pointer">
                         <div class="aspect-square bg-card rounded-md mb-3 overflow-hidden relative">
-                            <img src="./asset/img-song4.png" alt="÷ (Divide)"
-                                class="w-full h-full object-cover">
+                            <img src="./asset/img-song4.png" alt="÷ (Divide)" class="w-full h-full object-cover">
                             <button
                                 class="absolute bottom-2 right-2 w-10 h-10 rounded-full bg-accent text-white opacity-0 group-hover:opacity-100 transition-opacity">
                                 <i class="ri-play-fill text-xl"></i>
@@ -223,8 +223,7 @@
 
                     <div class="group cursor-pointer">
                         <div class="aspect-square bg-card rounded-md mb-3 overflow-hidden relative">
-                            <img src="./asset/img-song5.png" alt="÷ (Divide)"
-                                class="w-full h-full object-cover">
+                            <img src="./asset/img-song5.png" alt="÷ (Divide)" class="w-full h-full object-cover">
                             <button
                                 class="absolute bottom-2 right-2 w-10 h-10 rounded-full bg-accent text-white opacity-0 group-hover:opacity-100 transition-opacity">
                                 <i class="ri-play-fill text-xl"></i>
@@ -236,8 +235,7 @@
 
                     <div class="group cursor-pointer">
                         <div class="aspect-square bg-card rounded-md mb-3 overflow-hidden relative">
-                            <img src="./asset/img-song6.png" alt="÷ (Divide)"
-                                class="w-full h-full object-cover">
+                            <img src="./asset/img-song6.png" alt="÷ (Divide)" class="w-full h-full object-cover">
                             <button
                                 class="absolute bottom-2 right-2 w-10 h-10 rounded-full bg-accent text-white opacity-0 group-hover:opacity-100 transition-opacity">
                                 <i class="ri-play-fill text-xl"></i>
@@ -499,13 +497,13 @@
                 <div class='flex items-center justify-center space-x-4'>
                     <img class='w-10 h-10 rounded-full' src='./asset/img defualt album.png' alt='Media rounded avatar'>
                     <div class='font-medium'>
-                    <h5 class='text-base font-semibold text-white-500'>Team No Money</h5>
-                    <span class='text-sm text-gray-500'>Premium</span>
-                    <span class='text-sm text-gray-500'>.</span>
-                    <span>👑</span>
+                        <h5 class='text-base font-semibold text-white-500'>Team No Money</h5>
+                        <span class='text-sm text-gray-500'>Premium</span>
+                        <span class='text-sm text-gray-500'>.</span>
+                        <span>👑</span>
 
                     </div>
-                    </div>
+                </div>
             </div>
             <div class="flex items-center justify-between mb-6 ">
                 <h3 class="font-semibold">Fans Also Like</h3>
@@ -516,117 +514,119 @@
                 <article class="relative bg-black text-white w-72 rounded-lg p-4 shadow-lg overflow-hidden">
                     <!-- Image -->
                     <div class="relative z-10">
-                        <img src="./asset/img defualt album.png" alt="James Arthur" 
-                             class="w-full h-60 object-cover rounded-lg">
+                        <img src="./asset/img defualt album.png" alt="James Arthur"
+                            class="w-full h-60 object-cover rounded-lg">
                     </div>
-            
+
                     <!-- Content -->
-                    <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black via-black/80 to-transparent z-20">
+                    <div
+                        class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black via-black/80 to-transparent z-20">
                         <h3 class="text-xl font-semibold">James Arthur</h3>
                         <p class="text-gray-400">Artist</p>
                     </div>
                 </article>
             </div>
 
-                <div class="flex items-center justify-between mb-2 gap-4 overflow-auto ">
-                  <h2 class="font-semibold">Recent Played</h2>
-                  <button class="inline-flex items-center gap-2 text-sm font-medium underline-offset-4 hover:underline h-10 px-4 py-2 text-[#1db954]">
+            <div class="flex items-center justify-between mb-2 gap-4 overflow-auto ">
+                <h2 class="font-semibold">Recent Played</h2>
+                <button
+                    class="inline-flex items-center gap-2 text-sm font-medium underline-offset-4 hover:underline h-10 px-4 py-2 text-[#1db954]">
                     See All
-                  </button>
-                </div>
+                </button>
+            </div>
 
 
 
-                <div class="overflow-y-auto">
-                    <div class="space-y-4 overflow-auto">
-                        <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
-                          <div class="flex items-center gap-3">
+            <div class="overflow-y-auto">
+                <div class="space-y-4 overflow-auto">
+                    <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
+                        <div class="flex items-center gap-3">
                             <img src="./asset/recentplayimg1.png" alt="Perfect" class="rounded w-10 h-10">
                             <div>
-                              <div class="font-medium">Perfect</div>
-                              <div class="text-sm text-[#949494]">Ed Sheeran</div>
+                                <div class="font-medium">Perfect</div>
+                                <div class="text-sm text-[#949494]">Ed Sheeran</div>
                             </div>
-                          </div>
-                          <div class="flex items-center gap-4">
-                            <span class="text-sm text-[#949494]">2min ago</span>                    
-                          </div>
                         </div>
-      
-                        <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
-                          <div class="flex items-center gap-3">
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm text-[#949494]">2min ago</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
+                        <div class="flex items-center gap-3">
                             <img src="./asset/recentplayimg3.png" alt="Perfect" class="rounded w-10 h-10">
                             <div>
-                              <div class="font-medium">Perfect</div>
-                              <div class="text-sm text-[#949494]">Ed Sheeran</div>
+                                <div class="font-medium">Perfect</div>
+                                <div class="text-sm text-[#949494]">Ed Sheeran</div>
                             </div>
-                          </div>
-                          <div class="flex items-center gap-4">
-                            <span class="text-sm text-[#949494]">2min ago</span>                    
-                          </div>
                         </div>
-      
-                        <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
-                          <div class="flex items-center gap-3">
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm text-[#949494]">2min ago</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
+                        <div class="flex items-center gap-3">
                             <img src="./asset/recentplayimg4.png" alt="Perfect" class="rounded w-10 h-10">
                             <div>
-                              <div class="font-medium">Perfect</div>
-                              <div class="text-sm text-[#949494]">Ed Sheeran</div>
+                                <div class="font-medium">Perfect</div>
+                                <div class="text-sm text-[#949494]">Ed Sheeran</div>
                             </div>
-                          </div>
-                          <div class="flex items-center gap-4">
-                            <span class="text-sm text-[#949494]">2min ago</span>                    
-                          </div>
                         </div>
-      
-                    
-      
-                        <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
-                          <div class="flex items-center gap-3">
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm text-[#949494]">2min ago</span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
+                        <div class="flex items-center gap-3">
                             <img src="./asset/recentplayimg7.png" alt="Perfect" class="rounded w-10 h-10">
                             <div>
-                              <div class="font-medium">Perfect</div>
-                              <div class="text-sm text-[#949494]">Ed Sheeran</div>
+                                <div class="font-medium">Perfect</div>
+                                <div class="text-sm text-[#949494]">Ed Sheeran</div>
                             </div>
-                          </div>
-                          <div class="flex items-center gap-4">
-                            <span class="text-sm text-[#949494]">2min ago</span>                    
-                          </div>
                         </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm text-[#949494]">2min ago</span>
+                        </div>
+                    </div>
 
-                        <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
-                            <div class="flex items-center gap-3">
-                              <img src="./asset/recentplayimg7.png" alt="Perfect" class="rounded w-10 h-10">
-                              <div>
+                    <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
+                        <div class="flex items-center gap-3">
+                            <img src="./asset/recentplayimg7.png" alt="Perfect" class="rounded w-10 h-10">
+                            <div>
                                 <div class="font-medium">Perfect</div>
                                 <div class="text-sm text-[#949494]">Ed Sheeran</div>
-                              </div>
                             </div>
-                            <div class="flex items-center gap-4">
-                              <span class="text-sm text-[#949494]">2min ago</span>                    
-                            </div>
-                          </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm text-[#949494]">2min ago</span>
+                        </div>
+                    </div>
 
-                          <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
-                            <div class="flex items-center gap-3">
-                              <img src="./asset/recentplayimg7.png" alt="Perfect" class="rounded w-10 h-10">
-                              <div>
+                    <div class="flex items-center justify-between p-2 rounded hover:bg-[#212121]">
+                        <div class="flex items-center gap-3">
+                            <img src="./asset/recentplayimg7.png" alt="Perfect" class="rounded w-10 h-10">
+                            <div>
                                 <div class="font-medium">Perfect</div>
                                 <div class="text-sm text-[#949494]">Ed Sheeran</div>
-                              </div>
                             </div>
-                            <div class="flex items-center gap-4">
-                              <span class="text-sm text-[#949494]">2min ago</span>                    
-                            </div>
-                          </div>
-                          
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm text-[#949494]">2min ago</span>
+                        </div>
+                    </div>
+
                 </div>
-                
-                  
-                  <!-- Repeat for Other Songs -->
-                </div>
-              </div>
-              
-        </aside>
+
+
+                <!-- Repeat for Other Songs -->
+            </div>
+    </div>
+
+    </aside>
     </div>
 
     <!-- Player Bar -->

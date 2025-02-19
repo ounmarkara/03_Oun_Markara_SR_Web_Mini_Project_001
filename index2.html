@@ -28,10 +28,10 @@
 <body class="bg-background text-white h-screen flex flex-col">
     <div class="flex-1 flex overflow-hidden">
         <!-- Left Sidebar -->
+
         <aside class="w-60 border-r border-white/10 flex flex-col">
             <div class="p-6">
-                <img src="./asset/Logo.png"
-                    alt="BeatBay Logo" class="h-8 mb-8">
+                <img src="./asset/Logo.png" alt="BeatBay Logo" class="h-8 mb-8">
                 <nav class="space-y-2">
                     <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-md bg-white/10">
                         <i class="ri-home-line text-xl text-accent"></i>
@@ -94,28 +94,30 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1">
-           <header  class="h-16 flex items-center gap-4 px-6 sticky top-0 bg-background/90 backdrop-blur-sm z-10">
+
+        <main class="flex-1 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none]">
+
+            <header class="h-16 flex items-center gap-20 px-6 sticky top-0 bg-background/90 backdrop-blur-sm z-10">
                 <div class="flex items-center gap-2">
                     <button class="p-2 rounded-full hover:bg-white/10">
                         <i class="ri-arrow-left-s-line text-xl"></i>
                     </button>
+
                     <button class="p-2 rounded-full hover:bg-white/10">
                         <i class="ri-arrow-right-s-line text-xl"></i>
                     </button>
+
                 </div>
 
                 <div class="flex-1 relative">
                     <i class="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-muted"></i>
                     <input type="text" placeholder="Search music, artist, albums..."
-                        class="w-full max-w-md h-10 pl-10 pr-4 rounded-full bg-card text-sm text-white placeholder:text-muted bg-black">
-                </div>
-
-                <div class="flex items-center gap-4">
+                        class="w-full max-w-md h-10 pl-10 pr-4 rounded-full bg-black text-sm text-white placeholder:text-muted">
                     <button class="p-2 rounded-full hover:bg-white/10">
                         <i class="ri-notification-line text-xl"></i>
                     </button>
                 </div>
+
             </header>
 
             <h1 class="text-3xl font-bold mb-6">Good afternoon</h1>
@@ -130,8 +132,7 @@
                     <span class="font-semibold">Lenny's Podcast: Product | Growth | Career</span>
                 </div>
                 <div class="bg-surface-low rounded-md flex items-center p-4">
-                    <img src="./asset/img-page3.jpg" alt="Conversations with Tyler"
-                        class="w-16 h-16 mr-4">
+                    <img src="./asset/img-page3.jpg" alt="Conversations with Tyler" class="w-16 h-16 mr-4">
                     <span class="font-semibold">Conversations with Tyler</span>
                 </div>
                 <div class="bg-surface-low rounded-md flex items-center p-4">
@@ -141,34 +142,48 @@
             </div>
 
             <h2 class="text-2xl font-bold mb-4">Episode For You</h2>
-            <div class="flex gap-6 overflow-x-scroll">
 
-                <div class="bg-surface-low p-4 rounded-md">
+            <!-- scroll x auto -->
+
+            <div class="flex overflow-x-auto pb-10 gap-5 [scrollbar-width:none] [-ms-overflow-style:none]">
+                <div class="bg-surface-low p-4 rounded-md shrink-0 w-64 snap-start">
                     <img src="./asset/horizon-img1.jpg" alt="Every Parent's Nightmare"
                         class="w-full aspect-square object-cover mb-4 rounded">
                     <h3 class="font-semibold mb-1">Every Parent's Nightmare</h3>
                     <p class="text-sm text-secondary">Sep 2022 • 36 Min</p>
                 </div>
-                <div class="bg-surface-low p-4 rounded-md">
+                <div class="bg-surface-low p-4 rounded-md shrink-0 w-64 snap-start">
+                    <img src="./asset/horizon-img1.jpg" alt="Every Parent's Nightmare"
+                        class="w-full aspect-square object-cover mb-4 rounded">
+                    <h3 class="font-semibold mb-1">Every Parent's Nightmare</h3>
+                    <p class="text-sm text-secondary">Sep 2022 • 36 Min</p>
+                </div>
+                <div class="bg-surface-low p-4 rounded-md shrink-0 w-64 snap-start">
+                    <img src="./asset/horizon-img1.jpg" alt="Every Parent's Nightmare"
+                        class="w-full aspect-square object-cover mb-4 rounded">
+                    <h3 class="font-semibold mb-1">Every Parent's Nightmare</h3>
+                    <p class="text-sm text-secondary">Sep 2022 • 36 Min</p>
+                </div>
+                <div class="bg-surface-low p-4 rounded-md shrink-0 w-64 snap-start">
                     <img src="./asset/horizon-img2.jpg" alt="How the Pell Grant helped"
                         class="w-full aspect-square object-cover mb-4 rounded">
                     <h3 class="font-semibold mb-1">How the Pell Grant helped</h3>
                     <p class="text-sm text-secondary">Sep 2022 • 29 Min</p>
                 </div>
-                <div class="bg-surface-low p-4 rounded-md">
+                <div class="bg-surface-low p-4 rounded-md shrink-0 w-64 snap-start">
                     <img src="./asset/horizon-img3.jpg" alt="After 10 Years"
                         class="w-full aspect-square object-cover mb-4 rounded">
                     <h3 class="font-semibold mb-1">After 10 Years</h3>
                     <p class="text-sm text-secondary">Jul 2022 • 62 Min</p>
                 </div>
-                <div class="bg-surface-low p-4 rounded-md">
+                <div class="bg-surface-low p-4 rounded-md shrink-0 w-64 snap-start">
                     <img src="./asset/horizon-img5.jpg" alt="Book Exploder"
                         class="w-full aspect-square object-cover mb-4 rounded">
                     <h3 class="font-semibold mb-1">Book Exploder</h3>
                     <p class="text-sm text-secondary">Aug 2022 • 45 Min</p>
                 </div>
-
             </div>
+
         </main>
 
         <!-- Right Sidebar -->
@@ -176,21 +191,24 @@
             <h2 class="text-xl font-bold mb-4">Mi Friends</h2>
             <div class="space-y-4">
                 <div class="flex items-center gap-3">
-                    <img src="./asset/friend activity/friend -img1.png" alt="Kathryn Murphy" class="w-10 h-10 rounded-full">
+                    <img src="./asset/friend activity/friend -img1.png" alt="Kathryn Murphy"
+                        class="w-10 h-10 rounded-full">
                     <div>
                         <p class="font-semibold">Kathryn Murphy</p>
                         <p class="text-sm text-primary">Listening: Gavin Mikhail</p>
                     </div>
                 </div>
                 <div class="flex items-center gap-3">
-                    <img src="./asset/friend activity/friend -img2.png" alt="Bessie Cooper" class="w-10 h-10 rounded-full">
+                    <img src="./asset/friend activity/friend -img2.png" alt="Bessie Cooper"
+                        class="w-10 h-10 rounded-full">
                     <div>
                         <p class="font-semibold">Bessie Cooper</p>
                         <p class="text-sm text-orange-500">Absent</p>
                     </div>
                 </div>
                 <div class="flex items-center gap-3">
-                    <img src="./asset/friend activity/friend -img3.png" alt="Jane Cooper" class="w-10 h-10 rounded-full">
+                    <img src="./asset/friend activity/friend -img3.png" alt="Jane Cooper"
+                        class="w-10 h-10 rounded-full">
                     <div>
                         <p class="font-semibold">Jane Cooper</p>
                         <p class="text-sm text-primary">Listening: C4C</p>
@@ -198,7 +216,8 @@
                 </div>
 
                 <div class="flex items-center gap-3">
-                    <img src="./asset/friend activity/friend -img4.png" alt="Jane Cooper" class="w-10 h-10 rounded-full">
+                    <img src="./asset/friend activity/friend -img4.png" alt="Jane Cooper"
+                        class="w-10 h-10 rounded-full">
                     <div>
                         <p class="font-semibold">Jane Cooper</p>
                         <p class="text-sm text-primary">Listening: C4C</p>
@@ -206,7 +225,8 @@
                 </div>
 
                 <div class="flex items-center gap-3">
-                    <img src="./asset/friend activity/friend -img5.png" alt="Jane Cooper" class="w-10 h-10 rounded-full">
+                    <img src="./asset/friend activity/friend -img5.png" alt="Jane Cooper"
+                        class="w-10 h-10 rounded-full">
                     <div>
                         <p class="font-semibold">Jane Cooper</p>
                         <p class="text-sm text-primary">Listening: C4C</p>
@@ -214,7 +234,8 @@
                 </div>
 
                 <div class="flex items-center gap-3">
-                    <img src="./asset/friend activity/friend -img6.png" alt="Jane Cooper" class="w-10 h-10 rounded-full">
+                    <img src="./asset/friend activity/friend -img6.png" alt="Jane Cooper"
+                        class="w-10 h-10 rounded-full">
                     <div>
                         <p class="font-semibold">Jane Cooper</p>
                         <p class="text-sm text-primary">Listening: C4C</p>
@@ -222,12 +243,14 @@
                 </div>
 
                 <div class="flex items-center gap-3">
-                    <img src="./asset/friend activity/friend -img7.png" alt="Jane Cooper" class="w-10 h-10 rounded-full">
+                    <img src="./asset/friend activity/friend -img7.png" alt="Jane Cooper"
+                        class="w-10 h-10 rounded-full">
                     <div>
                         <p class="font-semibold">Jane Cooper</p>
                         <p class="text-sm text-primary">Listening: C4C</p>
                     </div>
                 </div>
+
 
                 <!-- Add more friend items as needed -->
             </div>
@@ -236,55 +259,41 @@
     </div>
 
     <!-- Player Bar -->
-    <footer class="h-20 border-t border-white/10 px-4 flex items-center gap-4 bg-card">
-        <div class="flex items-center gap-4">
-            <img src="./img/img-song1.png" alt="Shape of You" class="w-14 h-14 rounded">
+    <footer class="h-20 bg-surface-low border-t border-gray-700 px-4 flex items-center">
+        <div class="flex items-center gap-4 w-1/4">
+            <img src="./asset/recentplayimg1.png" alt="Shape of You" class="w-14 h-14 rounded">
             <div>
                 <h4 class="font-medium">Shape of You</h4>
-                <p class="text-sm text-muted">Ed Sheeran</p>
+                <p class="text-sm text-secondary">Ed Sheeran</p>
             </div>
-            <button class="hover:text-accent">
+            <button class="text-secondary hover:text-white">
                 <i class="ri-heart-line"></i>
             </button>
         </div>
-
-        <div class="flex-1 flex flex-col items-center gap-2">
-            <div class="flex items-center gap-6">
-                <button class="p-2 text-muted hover:text-white">
-                    <i class="ri-shuffle-line text-xl"></i>
+        <div class="flex-1 flex flex-col items-center">
+            <div class="flex items-center gap-6 mb-2">
+                <button class="text-secondary hover:text-white"><i class="ri-shuffle-line"></i></button>
+                <button class="text-secondary hover:text-white"><i class="ri-skip-back-fill"></i></button>
+                <button class="bg-white text-black rounded-full w-8 h-8 flex items-center justify-center">
+                    <i class="ri-pause-fill"></i>
                 </button>
-                <button class="p-2 text-muted hover:text-white">
-                    <i class="ri-skip-back-line text-xl"></i>
-                </button>
-                <button class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center">
-                    <i class="ri-pause-line text-xl"></i>
-                </button>
-                <button class="p-2 text-muted hover:text-white">
-                    <i class="ri-skip-forward-line text-xl"></i>
-                </button>
-                <button class="p-2 text-muted hover:text-white">
-                    <i class="ri-repeat-line text-xl"></i>
-                </button>
+                <button class="text-secondary hover:text-white"><i class="ri-skip-forward-fill"></i></button>
+                <button class="text-secondary hover:text-white"><i class="ri-repeat-line"></i></button>
             </div>
-            <div class="w-full max-w-2xl flex items-center gap-2">
-                <span class="text-xs text-muted">1:45</span>
-                <div class="flex-1 h-1 bg-white/10 rounded-full">
-                    <div class="h-full w-[40%] bg-white rounded-full"></div>
+            <div class="w-full flex items-center gap-2 text-xs text-secondary">
+                <span>1:45</span>
+                <div class="flex-1 h-1 bg-gray-600 rounded-full">
+                    <div class="w-1/3 h-full bg-white rounded-full"></div>
                 </div>
-                <span class="text-xs text-muted">4:42</span>
+                <span>4:42</span>
             </div>
         </div>
-
-        <div class="flex items-center gap-4">
-            <button class="p-2 text-muted hover:text-white">
-                <i class="ri-volume-up-line text-xl"></i>
-            </button>
-            <div class="w-24 h-1 bg-white/10 rounded-full">
-                <div class="h-full w-[70%] bg-white rounded-full"></div>
+        <div class="w-1/4 flex justify-end items-center gap-4">
+            <button class="text-secondary hover:text-white"><i class="ri-volume-up-line"></i></button>
+            <div class="w-24 h-1 bg-gray-600 rounded-full">
+                <div class="w-2/3 h-full bg-white rounded-full"></div>
             </div>
-            <button class="p-2 text-muted hover:text-white">
-                <i class="ri-list-unordered text-xl"></i>
-            </button>
+            <button class="text-secondary hover:text-white"><i class="ri-list-unordered"></i></button>
         </div>
     </footer>
 </body>

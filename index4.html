@@ -7,33 +7,17 @@
     <title>Music Stream</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        background: '#121212',
-                        surface: '#181818',
-                        primary: '#1DB954',
-                        secondary: '#b3b3b3',
-                        'surface-low': '#282828',
-                    }
-                }
-            }
-        }
-    </script>
-
 </head>
 
 <body class="bg-[#121212] text-white font-sans">
+
     <div class="flex h-screen">
+
         <!-- Sidebar -->
-        <aside class="w-60 border-r border-white/10 flex flex-col">
+
+        <aside class="w-60 border-r border-white/10 flex flex-col ">
             <div class="p-6">
-                <img src="./asset/Logo.png"
-                    alt="BeatBay Logo" class="h-8 mb-8">
+                <img src="./asset/Logo.png" alt="BeatBay Logo" class="h-8 mb-8">
                 <nav class="space-y-2">
                     <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-md bg-white/10">
                         <i class="ri-home-line text-xl text-accent"></i>
@@ -59,6 +43,7 @@
             </div>
 
             <div class="mt-4">
+
                 <h3 class="px-6 mb-2 text-xs font-semibold text-muted uppercase">Library</h3>
                 <nav class="space-y-1">
                     <a href="#" class="flex items-center gap-3 px-6 py-2 hover:bg-white/10">
@@ -76,7 +61,7 @@
                 </nav>
             </div>
 
-            <div class="mt-4">
+            <div class="mt-4 gap-[20px]">
                 <h3 class="px-6 mb-2 text-xs font-semibold text-muted uppercase">Playlist</h3>
                 <nav class="space-y-1">
                     <a href="#" class="flex items-center gap-3 px-6 py-2 hover:bg-white/10">
@@ -96,209 +81,648 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 overflow-y-auto">
+
+        <main class="flex-1 overflow-y-auto ">
+
             <!-- Header -->
-            <header  class="h-16 flex items-center gap-4 px-6 sticky top-0 bg-background/90 backdrop-blur-sm z-10">
+
+            <header class="h-16 flex items-center gap-20 px-6 sticky top-0 bg-background/90 backdrop-blur-sm z-10">
                 <div class="flex items-center gap-2">
                     <button class="p-2 rounded-full hover:bg-white/10">
                         <i class="ri-arrow-left-s-line text-xl"></i>
                     </button>
+                    <p>Home</p>
                     <button class="p-2 rounded-full hover:bg-white/10">
                         <i class="ri-arrow-right-s-line text-xl"></i>
                     </button>
+                    <p>Popular Artist</p>
                 </div>
 
                 <div class="flex-1 relative">
                     <i class="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-muted"></i>
                     <input type="text" placeholder="Search music, artist, albums..."
                         class="w-full max-w-md h-10 pl-10 pr-4 rounded-full bg-black text-sm text-white placeholder:text-muted">
-                </div>
-
-                <div class="flex items-center gap-4">
                     <button class="p-2 rounded-full hover:bg-white/10">
                         <i class="ri-notification-line text-xl"></i>
                     </button>
                 </div>
+
             </header>
 
             <!-- Content -->
-            <div class="p-8">
+
+            <div class="p-8 overflow-hidden">
                 <h1 class="text-3xl font-bold mb-6">PlayList For You</h1>
 
                 <!-- Mix Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                   
-                    <div class="bg-[#e91e63] rounded-xl p-4 relative overflow-hidden">
-                        <img src="./asset/playlist4u/img2.png"
-                            alt="Gamer Mix"
-                            class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50">
-                        <div class="relative z-10">
-                            <p class="text-sm font-semibold mb-1">47 Tracks</p>
-                            <h3 class="text-2xl font-bold mb-2">Gamer Mix</h3>
-                            <p class="text-sm">Listen while you play</p>
-                            <button
-                                class="mt-4 bg-white text-black rounded-full w-12 h-12 flex items-center justify-center">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
+
+                <div
+                    class=" flex flex-nowrap overflow-x-auto gap-[30px] [scrollbar-width:none] [-ms-overflow-style:none]">
+
+                    <div class=" bg-[url(./asset/playlist4u/img1.png)] flex relative flex-col justify-between bg-cover p-[30px] min-h-[440px] min-w-[240px] rounded-[50px] w-[440px] h-[440px] max-md:px-5 max-md:max-w-full overflow-hidden"
+                        tabindex="0" role="article">
+                        <div class="absolute w-full h-full bg-gradient-to-t from-yellow-500/50 left-0 bottom-0"></div>
+
+                        <div class="relative text-lg font-medium">47 Tracks</div>
+                        <div class="flex relative gap-5 justify-center items-center self-start mt-72 max-md:mt-10 ">
+                            <img loading="lazy"
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/a299de0a443d067934ee44847fb938e6c5109445bc4f48fee590e7722fa2e376?placeholderIfAbsent=true&apiKey=13fabc63cb2c4ef7af36afb2048f381f"
+                                class="object-contain shrink-0 self-stretch my-auto aspect-square w-[70px]"
+                                alt="Gamer Mix icon" />
+                            <div class="flex flex-col self-stretch my-auto">
+                                <div class="text-lg font-medium">Gamer Mix</div>
+                                <div class="text-base">listen while you play</div>
+                            </div>
                         </div>
                     </div>
 
-
-                    <div class="bg-[#e91e63] rounded-xl p-4 relative overflow-hidden">
-                        <img src="./asset/playlist4u/img2.png"
-                            alt="Gamer Mix"
-                            class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50">
-                        <div class="relative z-10">
-                            <p class="text-sm font-semibold mb-1">47 Tracks</p>
-                            <h3 class="text-2xl font-bold mb-2">Gamer Mix</h3>
-                            <p class="text-sm">Listen while you play</p>
-                            <button
-                                class="mt-4 bg-white text-black rounded-full w-12 h-12 flex items-center justify-center">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
+                    <div class=" bg-[url(./asset/playlist4u/img2.png)] flex relative flex-col justify-between bg-cover p-[30px] min-h-[440px] min-w-[240px] rounded-[50px] w-[440px] h-[440px] max-md:px-5 max-md:max-w-full overflow-hidden"
+                        tabindex="0" role="article">
+                        <div class="absolute w-full h-full bg-gradient-to-t from-yellow-500/50 left-0 bottom-0"></div>
+                        <div class="relative text-lg font-medium">47 Tracks</div>
+                        <div class="flex relative gap-5 justify-center items-center self-start mt-72 max-md:mt-10 ">
+                            <img loading="lazy"
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/a299de0a443d067934ee44847fb938e6c5109445bc4f48fee590e7722fa2e376?placeholderIfAbsent=true&apiKey=13fabc63cb2c4ef7af36afb2048f381f"
+                                class="object-contain shrink-0 self-stretch my-auto aspect-square w-[70px]"
+                                alt="Gamer Mix icon" />
+                            <div class="flex flex-col self-stretch my-auto">
+                                <div class="text-lg font-medium">Gamer Mix</div>
+                                <div class="text-base">listen while you play</div>
+                            </div>
                         </div>
                     </div>
 
-
-                    <div class="bg-[#2196f3] rounded-xl p-4 relative overflow-hidden">
-                        <img src="./asset/playlist4u/img3.png"
-                            alt="Future Mix"
-                            class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50">
-                        <div class="relative z-10">
-                            <p class="text-sm font-semibold mb-1">26 Tracks</p>
-                            <h3 class="text-2xl font-bold mb-2">Future Mix</h3>
-                            <p class="text-sm">Of your favorites</p>
-                            <button
-                                class="mt-4 bg-white text-black rounded-full w-12 h-12 flex items-center justify-center">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
+                    <div class=" bg-[url(./asset/playlist4u/img3.png)] flex relative flex-col justify-between bg-cover p-[30px] min-h-[440px] min-w-[240px] rounded-[50px] w-[440px] h-[440px] max-md:px-5 max-md:max-w-full overflow-hidden"
+                        tabindex="0" role="article">
+                        <div class="absolute w-full h-full bg-gradient-to-t from-yellow-500/50 left-0 bottom-0"></div>
+                        <div class="relative text-lg font-medium">47 Tracks</div>
+                        <div class="flex relative gap-5 justify-center items-center self-start mt-72 max-md:mt-10 ">
+                            <img loading="lazy"
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/a299de0a443d067934ee44847fb938e6c5109445bc4f48fee590e7722fa2e376?placeholderIfAbsent=true&apiKey=13fabc63cb2c4ef7af36afb2048f381f"
+                                class="object-contain shrink-0 self-stretch my-auto aspect-square w-[70px]"
+                                alt="Gamer Mix icon" />
+                            <div class="flex flex-col self-stretch my-auto">
+                                <div class="text-lg font-medium">Gamer Mix</div>
+                                <div class="text-base">listen while you play</div>
+                            </div>
                         </div>
                     </div>
+
+                    <div class=" bg-[url(./asset/playlist4u/img12.png)] flex relative flex-col justify-between bg-cover p-[30px] min-h-[440px] min-w-[240px] rounded-[50px] w-[440px] h-[440px] max-md:px-5 max-md:max-w-full overflow-hidden"
+                        tabindex="0" role="article">
+                        <div class="absolute w-full h-full bg-gradient-to-t from-yellow-500/50 left-0 bottom-0"></div>
+
+                        <div class="relative text-lg font-medium">47 Tracks</div>
+                        <div class="flex relative gap-5 justify-center items-center self-start mt-72 max-md:mt-10 ">
+                            <img loading="lazy"
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/a299de0a443d067934ee44847fb938e6c5109445bc4f48fee590e7722fa2e376?placeholderIfAbsent=true&apiKey=13fabc63cb2c4ef7af36afb2048f381f"
+                                class="object-contain shrink-0 self-stretch my-auto aspect-square w-[70px]"
+                                alt="Gamer Mix icon" />
+                            <div class="flex flex-col self-stretch my-auto">
+                                <div class="text-lg font-medium">Gamer Mix</div>
+                                <div class="text-base">listen while you play</div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
                 <!-- Most Listened and Tracks of the Week -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <h2 class="text-xl font-bold mb-4">What you listen to the most</h2>
-                        <div class="bg-[#212121] rounded-xl p-4">
-                            <div class="grid grid-cols-3 gap-2">
-                                <img src="./asset/playlist4u/img6.png" alt="Album cover" class="rounded-md">
-                                <img src="./asset/playlist4u/img6.png" alt="Album cover" class="rounded-md">
-                                <img src="./asset/playlist4u/img6.png" alt="Album cover" class="rounded-md">
-                                <img src="./asset/playlist4u/img6.png" alt="Album cover" class="rounded-md">
-                                <img src="./asset/playlist4u/img6.png" alt="Album cover" class="rounded-md">
-                                <img src="./asset/playlist4u/img6.png" alt="Album cover" class="rounded-md">
-                                
-                            </div>
-                        </div>
+                <!-- Add more tracks here following the same structure -->
+            </div>
+            <div class="flex flex-row justify-evenly">
+                <div>
+                    <div class="text-xl font-bold mb-4 ">
+                        what you listen to the most
                     </div>
-                    <div>
-                        <h2 class="text-xl font-bold mb-4">Tracks of the week</h2>
-                        <div class="bg-[#212121] rounded-xl p-4 space-y-4">
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center space-x-3">
-                                    <img src="./asset/friend activity/friend -img4.png" alt="Track cover"
-                                        class="w-12 h-12 rounded-md">
-                                    <div>
-                                        <h4 class="font-semibold">Setting Up Our Beds In Minecraft</h4>
-                                        <p class="text-sm text-gray-400">Sleepy Fish</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <span class="text-sm text-gray-400">311k</span>
-                                    <button class="text-green-500">
-                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd"
-                                                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                                                clip-rule="evenodd"></path>
-                                        </svg>
-                                    </button>
-                                    <button
-                                        class="bg-white text-black rounded-full w-8 h-8 flex items-center justify-center">
-                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd"
-                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                                                clip-rule="evenodd"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center space-x-3">
-                                    <img src="./asset/fram-img1/img5.jpg" alt="Track cover"
-                                        class="w-12 h-12 rounded-md">
-                                    <div>
-                                        <h4 class="font-semibold">Setting Up Our Beds In Minecraft</h4>
-                                        <p class="text-sm text-gray-400">Sleepy Fish</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <span class="text-sm text-gray-400">311k</span>
-                                    <button class="text-green-500">
-                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd"
-                                                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                                                clip-rule="evenodd"></path>
-                                        </svg>
-                                    </button>
-                                    <button
-                                        class="bg-white text-black rounded-full w-8 h-8 flex items-center justify-center">
-                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd"
-                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                                                clip-rule="evenodd"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center space-x-3">
-                                    <img src="./asset/fram-img1/img5.jpg" alt="Track cover"
-                                        class="w-12 h-12 rounded-md">
-                                    <div>
-                                        <h4 class="font-semibold">Setting Up Our Beds In Minecraft</h4>
-                                        <p class="text-sm text-gray-400">Sleepy Fish</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <span class="text-sm text-gray-400">311k</span>
-                                    <button class="text-green-500">
-                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd"
-                                                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                                                clip-rule="evenodd"></path>
-                                        </svg>
-                                    </button>
-                                    <button
-                                        class="bg-white text-black rounded-full w-8 h-8 flex items-center justify-center">
-                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd"
-                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                                                clip-rule="evenodd"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <!-- Add more tracks here following the same structure -->
+                    <div class="flex flex-row p-[30px] rounded-[25px] gap-[20px] w-[655px] h-[317px] border ">
+                        <div>
+                            <img class="w-[260px] h-[260px]" src="./asset/recentplayimg1.png" alt="">
                         </div>
+                        <div>
+                            <div class="flex flex-row gap-[20px]">
+                                <div class="flex flex-col gap-[20px]">
+                                    <img class="w-[120px] h-[120px]" src="./asset/img-song2.png" alt="">
+                                    <img class="w-[120px] h-[120px]" src="./asset/img-song5.png" alt="">
+                                </div>
+                                <div class="flex flex-col gap-[20px]">
+                                    <img class="w-[120px] h-[120px]" src="./asset/img-page-3.jpg" alt="">
+                                    <img class="w-[120px] h-[120px]" src="./asset/img-song4.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center -rotate-90 w-[160px]">Lo-fi Music</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-[695px] gap-[35px] ">
+                        <h2 class="text-xl font-bold mb-4">Tracks of the week</h2>
+
+                        <div
+                            class="w-[695px] p-[35px] bg-[#0d0d0d] rounded-[25px] border border-[#333333] flex-col justify-center items-center gap-[50px] inline-flex">
+                            <div class="w-[621px] justify-between items-center inline-flex ">
+                                <div class="justify-start items-start gap-5 flex">
+                                    <div
+                                        class="w-[60px] bg-white rounded-[10px] justify-center items-center flex overflow-hidden">
+                                        <img class="w-[60px] h-[60px]" src="./asset/recentplayimg1.png" />
+                                    </div>
+                                    <div class="flex-col justify-start items-start inline-flex">
+                                        <div class="text-white text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Setting Up Our Beds In Minecraft</div>
+                                        <div class="text-gray-400 text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Sleepy Fish</div>
+                                    </div>
+                                </div>
+                                <div class="justify-start items-center gap-5 flex">
+                                    <div class="justify-start items-center gap-[7px] flex">
+                                        <div data-svg-wrapper>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6.625 11.125H6.0625C4.81973 11.125 3.8125 12.134 3.8125 13.3792V15.6208C3.8125 16.8657 4.81973 17.875 6.0625 17.875H6.625C7.24621 17.875 7.75 17.3702 7.75 16.7479V12.2521C7.75 11.6295 7.24621 11.125 6.625 11.125ZM13.9375 11.125H13.375C12.7538 11.125 12.25 11.6295 12.25 12.2521V16.7479C12.25 17.3702 12.7538 17.875 13.375 17.875H13.9375C15.1803 17.875 16.1875 16.8657 16.1875 15.6208V13.3792C16.1875 12.1343 15.1803 11.125 13.9375 11.125ZM10 2.125C4.96949 2.125 1.16066 6.31316 1 11.125V15.0625C1 15.3733 1.25172 15.625 1.5625 15.625H2.125C2.43578 15.625 2.6875 15.3733 2.6875 15.0625V11.125C2.6875 7.09363 5.96863 3.81953 10 3.81883C14.0314 3.81953 17.3125 7.09363 17.3125 11.125V15.0625C17.3125 15.3733 17.5642 15.625 17.875 15.625H18.4375C18.7483 15.625 19 15.3733 19 15.0625V11.125C18.8393 6.31316 15.0305 2.125 10 2.125Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                        <div class="text-white text-lg font-bold font-['DM Sans'] leading-[27px]">
+                                            311k
+                                        </div>
+                                    </div>
+                                    <div data-svg-wrapper>
+                                        <svg width="122" height="64" viewBox="0 0 122 64" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1" y="1" width="120" height="62" rx="31" stroke="#333333"
+                                                stroke-width="2" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M24.09 25.965C25.0277 25.0277 26.2992 24.5011 27.625 24.5011C28.9509 24.5011 30.2224 25.0277 31.16 25.965L32.625 27.4288L34.09 25.965C34.5513 25.4875 35.103 25.1065 35.713 24.8445C36.323 24.5825 36.9791 24.4445 37.643 24.4388C38.3069 24.433 38.9653 24.5595 39.5798 24.8109C40.1943 25.0623 40.7525 25.4336 41.222 25.903C41.6915 26.3725 42.0627 26.9308 42.3141 27.5452C42.5655 28.1597 42.6921 28.8181 42.6863 29.482C42.6805 30.1459 42.5426 30.802 42.2805 31.412C42.0185 32.0221 41.6376 32.5738 41.16 33.035L32.625 41.5713L24.09 33.035C23.1527 32.0974 22.6261 30.8258 22.6261 29.5C22.6261 28.1742 23.1527 26.9026 24.09 25.965V25.965Z"
+                                                fill="#2BD268" />
+                                            <path
+                                                d="M88.572 22.4905L98.829 29.3306C99.2684 29.6236 99.6287 30.0238 99.8779 30.4894C100.127 30.9551 100.257 31.4751 100.257 32.0032C100.257 32.5313 100.127 33.0513 99.8779 33.5169C99.6287 33.9826 99.2684 34.3795 98.829 34.6725L88.572 41.5127C88.0888 41.8351 87.5272 42.0202 86.947 42.0484C86.3668 42.0766 85.7899 41.9467 85.2778 41.6727C84.7656 41.3987 84.3375 40.9908 84.039 40.4925C83.7405 39.9942 83.5829 39.4242 83.583 38.8434V25.1662C83.5818 24.5848 83.7385 24.014 84.0365 23.5148C84.3345 23.0156 84.7626 22.6068 85.2749 22.332C85.7873 22.0572 86.3647 21.9268 86.9454 21.9547C87.5261 21.9826 88.0883 22.1678 88.572 22.4905Z"
+                                                fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M116.677 43.05C118.128 39.5467 118.875 35.7919 118.875 32C118.875 24.3419 115.833 16.9974 110.418 11.5823C105.003 6.16718 97.6581 3.125 90 3.125C82.3419 3.125 74.9974 6.16718 69.5823 11.5823C64.1672 16.9974 61.125 24.3419 61.125 32C61.125 35.7919 61.8719 39.5467 63.323 43.05C64.7741 46.5533 66.901 49.7364 69.5823 52.4177C72.2636 55.099 75.4467 57.2259 78.95 58.677C82.4533 60.1281 86.2081 60.875 90 60.875C93.7919 60.875 97.5467 60.1281 101.05 58.677C104.553 57.2259 107.736 55.099 110.418 52.4177C113.099 49.7364 115.226 46.5533 116.677 43.05Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="w-[621px] justify-between items-center inline-flex">
+                                <div class="justify-start items-start gap-5 flex">
+                                    <div
+                                        class="w-[60px] bg-white rounded-[10px] justify-center items-center flex overflow-hidden">
+                                        <img class="w-[60px] h-[60px]" src="./asset/recentplayimg1.png" />
+                                    </div>
+                                    <div class="flex-col justify-start items-start inline-flex">
+                                        <div class="text-white text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Setting Up Our Beds In Minecraft</div>
+                                        <div class="text-gray-400 text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Sleepy Fish</div>
+                                    </div>
+                                </div>
+                                <div class="justify-start items-center gap-5 flex">
+                                    <div class="justify-start items-center gap-[7px] flex">
+                                        <div data-svg-wrapper>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6.625 11.125H6.0625C4.81973 11.125 3.8125 12.134 3.8125 13.3792V15.6208C3.8125 16.8657 4.81973 17.875 6.0625 17.875H6.625C7.24621 17.875 7.75 17.3702 7.75 16.7479V12.2521C7.75 11.6295 7.24621 11.125 6.625 11.125ZM13.9375 11.125H13.375C12.7538 11.125 12.25 11.6295 12.25 12.2521V16.7479C12.25 17.3702 12.7538 17.875 13.375 17.875H13.9375C15.1803 17.875 16.1875 16.8657 16.1875 15.6208V13.3792C16.1875 12.1343 15.1803 11.125 13.9375 11.125ZM10 2.125C4.96949 2.125 1.16066 6.31316 1 11.125V15.0625C1 15.3733 1.25172 15.625 1.5625 15.625H2.125C2.43578 15.625 2.6875 15.3733 2.6875 15.0625V11.125C2.6875 7.09363 5.96863 3.81953 10 3.81883C14.0314 3.81953 17.3125 7.09363 17.3125 11.125V15.0625C17.3125 15.3733 17.5642 15.625 17.875 15.625H18.4375C18.7483 15.625 19 15.3733 19 15.0625V11.125C18.8393 6.31316 15.0305 2.125 10 2.125Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                        <div class="text-white text-lg font-bold font-['DM Sans'] leading-[27px]">
+                                            311k
+                                        </div>
+                                    </div>
+                                    <div data-svg-wrapper>
+                                        <svg width="122" height="64" viewBox="0 0 122 64" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1" y="1" width="120" height="62" rx="31" stroke="#333333"
+                                                stroke-width="2" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M24.09 25.965C25.0277 25.0277 26.2992 24.5011 27.625 24.5011C28.9509 24.5011 30.2224 25.0277 31.16 25.965L32.625 27.4288L34.09 25.965C34.5513 25.4875 35.103 25.1065 35.713 24.8445C36.323 24.5825 36.9791 24.4445 37.643 24.4388C38.3069 24.433 38.9653 24.5595 39.5798 24.8109C40.1943 25.0623 40.7525 25.4336 41.222 25.903C41.6915 26.3725 42.0627 26.9308 42.3141 27.5452C42.5655 28.1597 42.6921 28.8181 42.6863 29.482C42.6805 30.1459 42.5426 30.802 42.2805 31.412C42.0185 32.0221 41.6376 32.5738 41.16 33.035L32.625 41.5713L24.09 33.035C23.1527 32.0974 22.6261 30.8258 22.6261 29.5C22.6261 28.1742 23.1527 26.9026 24.09 25.965V25.965Z"
+                                                fill="#2BD268" />
+                                            <path
+                                                d="M88.572 22.4905L98.829 29.3306C99.2684 29.6236 99.6287 30.0238 99.8779 30.4894C100.127 30.9551 100.257 31.4751 100.257 32.0032C100.257 32.5313 100.127 33.0513 99.8779 33.5169C99.6287 33.9826 99.2684 34.3795 98.829 34.6725L88.572 41.5127C88.0888 41.8351 87.5272 42.0202 86.947 42.0484C86.3668 42.0766 85.7899 41.9467 85.2778 41.6727C84.7656 41.3987 84.3375 40.9908 84.039 40.4925C83.7405 39.9942 83.5829 39.4242 83.583 38.8434V25.1662C83.5818 24.5848 83.7385 24.014 84.0365 23.5148C84.3345 23.0156 84.7626 22.6068 85.2749 22.332C85.7873 22.0572 86.3647 21.9268 86.9454 21.9547C87.5261 21.9826 88.0883 22.1678 88.572 22.4905Z"
+                                                fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M116.677 43.05C118.128 39.5467 118.875 35.7919 118.875 32C118.875 24.3419 115.833 16.9974 110.418 11.5823C105.003 6.16718 97.6581 3.125 90 3.125C82.3419 3.125 74.9974 6.16718 69.5823 11.5823C64.1672 16.9974 61.125 24.3419 61.125 32C61.125 35.7919 61.8719 39.5467 63.323 43.05C64.7741 46.5533 66.901 49.7364 69.5823 52.4177C72.2636 55.099 75.4467 57.2259 78.95 58.677C82.4533 60.1281 86.2081 60.875 90 60.875C93.7919 60.875 97.5467 60.1281 101.05 58.677C104.553 57.2259 107.736 55.099 110.418 52.4177C113.099 49.7364 115.226 46.5533 116.677 43.05Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="w-[621px] justify-between items-center inline-flex">
+                                <div class="justify-start items-start gap-5 flex">
+                                    <div
+                                        class="w-[60px] bg-white rounded-[10px] justify-center items-center flex overflow-hidden">
+                                        <img class="w-[60px] h-[60px]" src="./asset/recentplayimg1.png" />
+                                    </div>
+                                    <div class="flex-col justify-start items-start inline-flex">
+                                        <div class="text-white text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Setting Up Our Beds In Minecraft</div>
+                                        <div class="text-gray-400 text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Sleepy Fish</div>
+                                    </div>
+                                </div>
+                                <div class="justify-start items-center gap-5 flex">
+                                    <div class="justify-start items-center gap-[7px] flex">
+                                        <div data-svg-wrapper>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6.625 11.125H6.0625C4.81973 11.125 3.8125 12.134 3.8125 13.3792V15.6208C3.8125 16.8657 4.81973 17.875 6.0625 17.875H6.625C7.24621 17.875 7.75 17.3702 7.75 16.7479V12.2521C7.75 11.6295 7.24621 11.125 6.625 11.125ZM13.9375 11.125H13.375C12.7538 11.125 12.25 11.6295 12.25 12.2521V16.7479C12.25 17.3702 12.7538 17.875 13.375 17.875H13.9375C15.1803 17.875 16.1875 16.8657 16.1875 15.6208V13.3792C16.1875 12.1343 15.1803 11.125 13.9375 11.125ZM10 2.125C4.96949 2.125 1.16066 6.31316 1 11.125V15.0625C1 15.3733 1.25172 15.625 1.5625 15.625H2.125C2.43578 15.625 2.6875 15.3733 2.6875 15.0625V11.125C2.6875 7.09363 5.96863 3.81953 10 3.81883C14.0314 3.81953 17.3125 7.09363 17.3125 11.125V15.0625C17.3125 15.3733 17.5642 15.625 17.875 15.625H18.4375C18.7483 15.625 19 15.3733 19 15.0625V11.125C18.8393 6.31316 15.0305 2.125 10 2.125Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                        <div class="text-white text-lg font-bold font-['DM Sans'] leading-[27px]">
+                                            311k
+                                        </div>
+                                    </div>
+                                    <div data-svg-wrapper>
+                                        <svg width="122" height="64" viewBox="0 0 122 64" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1" y="1" width="120" height="62" rx="31" stroke="#333333"
+                                                stroke-width="2" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M24.09 25.965C25.0277 25.0277 26.2992 24.5011 27.625 24.5011C28.9509 24.5011 30.2224 25.0277 31.16 25.965L32.625 27.4288L34.09 25.965C34.5513 25.4875 35.103 25.1065 35.713 24.8445C36.323 24.5825 36.9791 24.4445 37.643 24.4388C38.3069 24.433 38.9653 24.5595 39.5798 24.8109C40.1943 25.0623 40.7525 25.4336 41.222 25.903C41.6915 26.3725 42.0627 26.9308 42.3141 27.5452C42.5655 28.1597 42.6921 28.8181 42.6863 29.482C42.6805 30.1459 42.5426 30.802 42.2805 31.412C42.0185 32.0221 41.6376 32.5738 41.16 33.035L32.625 41.5713L24.09 33.035C23.1527 32.0974 22.6261 30.8258 22.6261 29.5C22.6261 28.1742 23.1527 26.9026 24.09 25.965V25.965Z"
+                                                fill="#2BD268" />
+                                            <path
+                                                d="M88.572 22.4905L98.829 29.3306C99.2684 29.6236 99.6287 30.0238 99.8779 30.4894C100.127 30.9551 100.257 31.4751 100.257 32.0032C100.257 32.5313 100.127 33.0513 99.8779 33.5169C99.6287 33.9826 99.2684 34.3795 98.829 34.6725L88.572 41.5127C88.0888 41.8351 87.5272 42.0202 86.947 42.0484C86.3668 42.0766 85.7899 41.9467 85.2778 41.6727C84.7656 41.3987 84.3375 40.9908 84.039 40.4925C83.7405 39.9942 83.5829 39.4242 83.583 38.8434V25.1662C83.5818 24.5848 83.7385 24.014 84.0365 23.5148C84.3345 23.0156 84.7626 22.6068 85.2749 22.332C85.7873 22.0572 86.3647 21.9268 86.9454 21.9547C87.5261 21.9826 88.0883 22.1678 88.572 22.4905Z"
+                                                fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M116.677 43.05C118.128 39.5467 118.875 35.7919 118.875 32C118.875 24.3419 115.833 16.9974 110.418 11.5823C105.003 6.16718 97.6581 3.125 90 3.125C82.3419 3.125 74.9974 6.16718 69.5823 11.5823C64.1672 16.9974 61.125 24.3419 61.125 32C61.125 35.7919 61.8719 39.5467 63.323 43.05C64.7741 46.5533 66.901 49.7364 69.5823 52.4177C72.2636 55.099 75.4467 57.2259 78.95 58.677C82.4533 60.1281 86.2081 60.875 90 60.875C93.7919 60.875 97.5467 60.1281 101.05 58.677C104.553 57.2259 107.736 55.099 110.418 52.4177C113.099 49.7364 115.226 46.5533 116.677 43.05Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="w-[621px] justify-between items-center inline-flex">
+                                <div class="justify-start items-start gap-5 flex">
+                                    <div
+                                        class="w-[60px] bg-white rounded-[10px] justify-center items-center flex overflow-hidden">
+                                        <img class="w-[60px] h-[60px]" src="./asset/recentplayimg1.png" />
+                                    </div>
+                                    <div class="flex-col justify-start items-start inline-flex">
+                                        <div class="text-white text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Setting Up Our Beds In Minecraft</div>
+                                        <div class="text-gray-400 text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Sleepy Fish</div>
+                                    </div>
+                                </div>
+                                <div class="justify-start items-center gap-5 flex">
+                                    <div class="justify-start items-center gap-[7px] flex">
+                                        <div data-svg-wrapper>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6.625 11.125H6.0625C4.81973 11.125 3.8125 12.134 3.8125 13.3792V15.6208C3.8125 16.8657 4.81973 17.875 6.0625 17.875H6.625C7.24621 17.875 7.75 17.3702 7.75 16.7479V12.2521C7.75 11.6295 7.24621 11.125 6.625 11.125ZM13.9375 11.125H13.375C12.7538 11.125 12.25 11.6295 12.25 12.2521V16.7479C12.25 17.3702 12.7538 17.875 13.375 17.875H13.9375C15.1803 17.875 16.1875 16.8657 16.1875 15.6208V13.3792C16.1875 12.1343 15.1803 11.125 13.9375 11.125ZM10 2.125C4.96949 2.125 1.16066 6.31316 1 11.125V15.0625C1 15.3733 1.25172 15.625 1.5625 15.625H2.125C2.43578 15.625 2.6875 15.3733 2.6875 15.0625V11.125C2.6875 7.09363 5.96863 3.81953 10 3.81883C14.0314 3.81953 17.3125 7.09363 17.3125 11.125V15.0625C17.3125 15.3733 17.5642 15.625 17.875 15.625H18.4375C18.7483 15.625 19 15.3733 19 15.0625V11.125C18.8393 6.31316 15.0305 2.125 10 2.125Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                        <div class="text-white text-lg font-bold font-['DM Sans'] leading-[27px]">
+                                            311k
+                                        </div>
+                                    </div>
+                                    <div data-svg-wrapper>
+                                        <svg width="122" height="64" viewBox="0 0 122 64" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1" y="1" width="120" height="62" rx="31" stroke="#333333"
+                                                stroke-width="2" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M24.09 25.965C25.0277 25.0277 26.2992 24.5011 27.625 24.5011C28.9509 24.5011 30.2224 25.0277 31.16 25.965L32.625 27.4288L34.09 25.965C34.5513 25.4875 35.103 25.1065 35.713 24.8445C36.323 24.5825 36.9791 24.4445 37.643 24.4388C38.3069 24.433 38.9653 24.5595 39.5798 24.8109C40.1943 25.0623 40.7525 25.4336 41.222 25.903C41.6915 26.3725 42.0627 26.9308 42.3141 27.5452C42.5655 28.1597 42.6921 28.8181 42.6863 29.482C42.6805 30.1459 42.5426 30.802 42.2805 31.412C42.0185 32.0221 41.6376 32.5738 41.16 33.035L32.625 41.5713L24.09 33.035C23.1527 32.0974 22.6261 30.8258 22.6261 29.5C22.6261 28.1742 23.1527 26.9026 24.09 25.965V25.965Z"
+                                                fill="#2BD268" />
+                                            <path
+                                                d="M88.572 22.4905L98.829 29.3306C99.2684 29.6236 99.6287 30.0238 99.8779 30.4894C100.127 30.9551 100.257 31.4751 100.257 32.0032C100.257 32.5313 100.127 33.0513 99.8779 33.5169C99.6287 33.9826 99.2684 34.3795 98.829 34.6725L88.572 41.5127C88.0888 41.8351 87.5272 42.0202 86.947 42.0484C86.3668 42.0766 85.7899 41.9467 85.2778 41.6727C84.7656 41.3987 84.3375 40.9908 84.039 40.4925C83.7405 39.9942 83.5829 39.4242 83.583 38.8434V25.1662C83.5818 24.5848 83.7385 24.014 84.0365 23.5148C84.3345 23.0156 84.7626 22.6068 85.2749 22.332C85.7873 22.0572 86.3647 21.9268 86.9454 21.9547C87.5261 21.9826 88.0883 22.1678 88.572 22.4905Z"
+                                                fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M116.677 43.05C118.128 39.5467 118.875 35.7919 118.875 32C118.875 24.3419 115.833 16.9974 110.418 11.5823C105.003 6.16718 97.6581 3.125 90 3.125C82.3419 3.125 74.9974 6.16718 69.5823 11.5823C64.1672 16.9974 61.125 24.3419 61.125 32C61.125 35.7919 61.8719 39.5467 63.323 43.05C64.7741 46.5533 66.901 49.7364 69.5823 52.4177C72.2636 55.099 75.4467 57.2259 78.95 58.677C82.4533 60.1281 86.2081 60.875 90 60.875C93.7919 60.875 97.5467 60.1281 101.05 58.677C104.553 57.2259 107.736 55.099 110.418 52.4177C113.099 49.7364 115.226 46.5533 116.677 43.05Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="w-[621px] justify-between items-center inline-flex">
+                                <div class="justify-start items-start gap-5 flex">
+                                    <div
+                                        class="w-[60px] bg-white rounded-[10px] justify-center items-center flex overflow-hidden">
+                                        <img class="w-[60px] h-[60px]" src="./asset/recentplayimg1.png" />
+                                    </div>
+                                    <div class="flex-col justify-start items-start inline-flex">
+                                        <div class="text-white text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Setting Up Our Beds In Minecraft</div>
+                                        <div class="text-gray-400 text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Sleepy Fish</div>
+                                    </div>
+                                </div>
+                                <div class="justify-start items-center gap-5 flex">
+                                    <div class="justify-start items-center gap-[7px] flex">
+                                        <div data-svg-wrapper>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6.625 11.125H6.0625C4.81973 11.125 3.8125 12.134 3.8125 13.3792V15.6208C3.8125 16.8657 4.81973 17.875 6.0625 17.875H6.625C7.24621 17.875 7.75 17.3702 7.75 16.7479V12.2521C7.75 11.6295 7.24621 11.125 6.625 11.125ZM13.9375 11.125H13.375C12.7538 11.125 12.25 11.6295 12.25 12.2521V16.7479C12.25 17.3702 12.7538 17.875 13.375 17.875H13.9375C15.1803 17.875 16.1875 16.8657 16.1875 15.6208V13.3792C16.1875 12.1343 15.1803 11.125 13.9375 11.125ZM10 2.125C4.96949 2.125 1.16066 6.31316 1 11.125V15.0625C1 15.3733 1.25172 15.625 1.5625 15.625H2.125C2.43578 15.625 2.6875 15.3733 2.6875 15.0625V11.125C2.6875 7.09363 5.96863 3.81953 10 3.81883C14.0314 3.81953 17.3125 7.09363 17.3125 11.125V15.0625C17.3125 15.3733 17.5642 15.625 17.875 15.625H18.4375C18.7483 15.625 19 15.3733 19 15.0625V11.125C18.8393 6.31316 15.0305 2.125 10 2.125Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                        <div class="text-white text-lg font-bold font-['DM Sans'] leading-[27px]">
+                                            311k
+                                        </div>
+                                    </div>
+                                    <div data-svg-wrapper>
+                                        <svg width="122" height="64" viewBox="0 0 122 64" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1" y="1" width="120" height="62" rx="31" stroke="#333333"
+                                                stroke-width="2" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M24.09 25.965C25.0277 25.0277 26.2992 24.5011 27.625 24.5011C28.9509 24.5011 30.2224 25.0277 31.16 25.965L32.625 27.4288L34.09 25.965C34.5513 25.4875 35.103 25.1065 35.713 24.8445C36.323 24.5825 36.9791 24.4445 37.643 24.4388C38.3069 24.433 38.9653 24.5595 39.5798 24.8109C40.1943 25.0623 40.7525 25.4336 41.222 25.903C41.6915 26.3725 42.0627 26.9308 42.3141 27.5452C42.5655 28.1597 42.6921 28.8181 42.6863 29.482C42.6805 30.1459 42.5426 30.802 42.2805 31.412C42.0185 32.0221 41.6376 32.5738 41.16 33.035L32.625 41.5713L24.09 33.035C23.1527 32.0974 22.6261 30.8258 22.6261 29.5C22.6261 28.1742 23.1527 26.9026 24.09 25.965V25.965Z"
+                                                fill="#2BD268" />
+                                            <path
+                                                d="M88.572 22.4905L98.829 29.3306C99.2684 29.6236 99.6287 30.0238 99.8779 30.4894C100.127 30.9551 100.257 31.4751 100.257 32.0032C100.257 32.5313 100.127 33.0513 99.8779 33.5169C99.6287 33.9826 99.2684 34.3795 98.829 34.6725L88.572 41.5127C88.0888 41.8351 87.5272 42.0202 86.947 42.0484C86.3668 42.0766 85.7899 41.9467 85.2778 41.6727C84.7656 41.3987 84.3375 40.9908 84.039 40.4925C83.7405 39.9942 83.5829 39.4242 83.583 38.8434V25.1662C83.5818 24.5848 83.7385 24.014 84.0365 23.5148C84.3345 23.0156 84.7626 22.6068 85.2749 22.332C85.7873 22.0572 86.3647 21.9268 86.9454 21.9547C87.5261 21.9826 88.0883 22.1678 88.572 22.4905Z"
+                                                fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M116.677 43.05C118.128 39.5467 118.875 35.7919 118.875 32C118.875 24.3419 115.833 16.9974 110.418 11.5823C105.003 6.16718 97.6581 3.125 90 3.125C82.3419 3.125 74.9974 6.16718 69.5823 11.5823C64.1672 16.9974 61.125 24.3419 61.125 32C61.125 35.7919 61.8719 39.5467 63.323 43.05C64.7741 46.5533 66.901 49.7364 69.5823 52.4177C72.2636 55.099 75.4467 57.2259 78.95 58.677C82.4533 60.1281 86.2081 60.875 90 60.875C93.7919 60.875 97.5467 60.1281 101.05 58.677C104.553 57.2259 107.736 55.099 110.418 52.4177C113.099 49.7364 115.226 46.5533 116.677 43.05Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="w-[621px] justify-between items-center inline-flex">
+                                <div class="justify-start items-start gap-5 flex">
+                                    <div
+                                        class="w-[60px] bg-white rounded-[10px] justify-center items-center flex overflow-hidden">
+                                        <img class="w-[60px] h-[60px]" src="./asset/recentplayimg1.png" />
+                                    </div>
+                                    <div class="flex-col justify-start items-start inline-flex">
+                                        <div class="text-white text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Setting Up Our Beds In Minecraft</div>
+                                        <div class="text-gray-400 text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Sleepy Fish</div>
+                                    </div>
+                                </div>
+                                <div class="justify-start items-center gap-5 flex">
+                                    <div class="justify-start items-center gap-[7px] flex">
+                                        <div data-svg-wrapper>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6.625 11.125H6.0625C4.81973 11.125 3.8125 12.134 3.8125 13.3792V15.6208C3.8125 16.8657 4.81973 17.875 6.0625 17.875H6.625C7.24621 17.875 7.75 17.3702 7.75 16.7479V12.2521C7.75 11.6295 7.24621 11.125 6.625 11.125ZM13.9375 11.125H13.375C12.7538 11.125 12.25 11.6295 12.25 12.2521V16.7479C12.25 17.3702 12.7538 17.875 13.375 17.875H13.9375C15.1803 17.875 16.1875 16.8657 16.1875 15.6208V13.3792C16.1875 12.1343 15.1803 11.125 13.9375 11.125ZM10 2.125C4.96949 2.125 1.16066 6.31316 1 11.125V15.0625C1 15.3733 1.25172 15.625 1.5625 15.625H2.125C2.43578 15.625 2.6875 15.3733 2.6875 15.0625V11.125C2.6875 7.09363 5.96863 3.81953 10 3.81883C14.0314 3.81953 17.3125 7.09363 17.3125 11.125V15.0625C17.3125 15.3733 17.5642 15.625 17.875 15.625H18.4375C18.7483 15.625 19 15.3733 19 15.0625V11.125C18.8393 6.31316 15.0305 2.125 10 2.125Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                        <div class="text-white text-lg font-bold font-['DM Sans'] leading-[27px]">
+                                            311k
+                                        </div>
+                                    </div>
+                                    <div data-svg-wrapper>
+                                        <svg width="122" height="64" viewBox="0 0 122 64" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1" y="1" width="120" height="62" rx="31" stroke="#333333"
+                                                stroke-width="2" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M24.09 25.965C25.0277 25.0277 26.2992 24.5011 27.625 24.5011C28.9509 24.5011 30.2224 25.0277 31.16 25.965L32.625 27.4288L34.09 25.965C34.5513 25.4875 35.103 25.1065 35.713 24.8445C36.323 24.5825 36.9791 24.4445 37.643 24.4388C38.3069 24.433 38.9653 24.5595 39.5798 24.8109C40.1943 25.0623 40.7525 25.4336 41.222 25.903C41.6915 26.3725 42.0627 26.9308 42.3141 27.5452C42.5655 28.1597 42.6921 28.8181 42.6863 29.482C42.6805 30.1459 42.5426 30.802 42.2805 31.412C42.0185 32.0221 41.6376 32.5738 41.16 33.035L32.625 41.5713L24.09 33.035C23.1527 32.0974 22.6261 30.8258 22.6261 29.5C22.6261 28.1742 23.1527 26.9026 24.09 25.965V25.965Z"
+                                                fill="#2BD268" />
+                                            <path
+                                                d="M88.572 22.4905L98.829 29.3306C99.2684 29.6236 99.6287 30.0238 99.8779 30.4894C100.127 30.9551 100.257 31.4751 100.257 32.0032C100.257 32.5313 100.127 33.0513 99.8779 33.5169C99.6287 33.9826 99.2684 34.3795 98.829 34.6725L88.572 41.5127C88.0888 41.8351 87.5272 42.0202 86.947 42.0484C86.3668 42.0766 85.7899 41.9467 85.2778 41.6727C84.7656 41.3987 84.3375 40.9908 84.039 40.4925C83.7405 39.9942 83.5829 39.4242 83.583 38.8434V25.1662C83.5818 24.5848 83.7385 24.014 84.0365 23.5148C84.3345 23.0156 84.7626 22.6068 85.2749 22.332C85.7873 22.0572 86.3647 21.9268 86.9454 21.9547C87.5261 21.9826 88.0883 22.1678 88.572 22.4905Z"
+                                                fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M116.677 43.05C118.128 39.5467 118.875 35.7919 118.875 32C118.875 24.3419 115.833 16.9974 110.418 11.5823C105.003 6.16718 97.6581 3.125 90 3.125C82.3419 3.125 74.9974 6.16718 69.5823 11.5823C64.1672 16.9974 61.125 24.3419 61.125 32C61.125 35.7919 61.8719 39.5467 63.323 43.05C64.7741 46.5533 66.901 49.7364 69.5823 52.4177C72.2636 55.099 75.4467 57.2259 78.95 58.677C82.4533 60.1281 86.2081 60.875 90 60.875C93.7919 60.875 97.5467 60.1281 101.05 58.677C104.553 57.2259 107.736 55.099 110.418 52.4177C113.099 49.7364 115.226 46.5533 116.677 43.05Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="w-[621px] justify-between items-center inline-flex">
+                                <div class="justify-start items-start gap-5 flex">
+                                    <div
+                                        class="w-[60px] bg-white rounded-[10px] justify-center items-center flex overflow-hidden">
+                                        <img class="w-[60px] h-[60px]" src="./asset/recentplayimg1.png" />
+                                    </div>
+                                    <div class="flex-col justify-start items-start inline-flex">
+                                        <div class="text-white text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Setting Up Our Beds In Minecraft</div>
+                                        <div class="text-gray-400 text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Sleepy Fish</div>
+                                    </div>
+                                </div>
+                                <div class="justify-start items-center gap-5 flex">
+                                    <div class="justify-start items-center gap-[7px] flex">
+                                        <div data-svg-wrapper>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6.625 11.125H6.0625C4.81973 11.125 3.8125 12.134 3.8125 13.3792V15.6208C3.8125 16.8657 4.81973 17.875 6.0625 17.875H6.625C7.24621 17.875 7.75 17.3702 7.75 16.7479V12.2521C7.75 11.6295 7.24621 11.125 6.625 11.125ZM13.9375 11.125H13.375C12.7538 11.125 12.25 11.6295 12.25 12.2521V16.7479C12.25 17.3702 12.7538 17.875 13.375 17.875H13.9375C15.1803 17.875 16.1875 16.8657 16.1875 15.6208V13.3792C16.1875 12.1343 15.1803 11.125 13.9375 11.125ZM10 2.125C4.96949 2.125 1.16066 6.31316 1 11.125V15.0625C1 15.3733 1.25172 15.625 1.5625 15.625H2.125C2.43578 15.625 2.6875 15.3733 2.6875 15.0625V11.125C2.6875 7.09363 5.96863 3.81953 10 3.81883C14.0314 3.81953 17.3125 7.09363 17.3125 11.125V15.0625C17.3125 15.3733 17.5642 15.625 17.875 15.625H18.4375C18.7483 15.625 19 15.3733 19 15.0625V11.125C18.8393 6.31316 15.0305 2.125 10 2.125Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                        <div class="text-white text-lg font-bold font-['DM Sans'] leading-[27px]">
+                                            311k
+                                        </div>
+                                    </div>
+                                    <div data-svg-wrapper>
+                                        <svg width="122" height="64" viewBox="0 0 122 64" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1" y="1" width="120" height="62" rx="31" stroke="#333333"
+                                                stroke-width="2" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M24.09 25.965C25.0277 25.0277 26.2992 24.5011 27.625 24.5011C28.9509 24.5011 30.2224 25.0277 31.16 25.965L32.625 27.4288L34.09 25.965C34.5513 25.4875 35.103 25.1065 35.713 24.8445C36.323 24.5825 36.9791 24.4445 37.643 24.4388C38.3069 24.433 38.9653 24.5595 39.5798 24.8109C40.1943 25.0623 40.7525 25.4336 41.222 25.903C41.6915 26.3725 42.0627 26.9308 42.3141 27.5452C42.5655 28.1597 42.6921 28.8181 42.6863 29.482C42.6805 30.1459 42.5426 30.802 42.2805 31.412C42.0185 32.0221 41.6376 32.5738 41.16 33.035L32.625 41.5713L24.09 33.035C23.1527 32.0974 22.6261 30.8258 22.6261 29.5C22.6261 28.1742 23.1527 26.9026 24.09 25.965V25.965Z"
+                                                fill="#2BD268" />
+                                            <path
+                                                d="M88.572 22.4905L98.829 29.3306C99.2684 29.6236 99.6287 30.0238 99.8779 30.4894C100.127 30.9551 100.257 31.4751 100.257 32.0032C100.257 32.5313 100.127 33.0513 99.8779 33.5169C99.6287 33.9826 99.2684 34.3795 98.829 34.6725L88.572 41.5127C88.0888 41.8351 87.5272 42.0202 86.947 42.0484C86.3668 42.0766 85.7899 41.9467 85.2778 41.6727C84.7656 41.3987 84.3375 40.9908 84.039 40.4925C83.7405 39.9942 83.5829 39.4242 83.583 38.8434V25.1662C83.5818 24.5848 83.7385 24.014 84.0365 23.5148C84.3345 23.0156 84.7626 22.6068 85.2749 22.332C85.7873 22.0572 86.3647 21.9268 86.9454 21.9547C87.5261 21.9826 88.0883 22.1678 88.572 22.4905Z"
+                                                fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M116.677 43.05C118.128 39.5467 118.875 35.7919 118.875 32C118.875 24.3419 115.833 16.9974 110.418 11.5823C105.003 6.16718 97.6581 3.125 90 3.125C82.3419 3.125 74.9974 6.16718 69.5823 11.5823C64.1672 16.9974 61.125 24.3419 61.125 32C61.125 35.7919 61.8719 39.5467 63.323 43.05C64.7741 46.5533 66.901 49.7364 69.5823 52.4177C72.2636 55.099 75.4467 57.2259 78.95 58.677C82.4533 60.1281 86.2081 60.875 90 60.875C93.7919 60.875 97.5467 60.1281 101.05 58.677C104.553 57.2259 107.736 55.099 110.418 52.4177C113.099 49.7364 115.226 46.5533 116.677 43.05Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="w-[621px] justify-between items-center inline-flex">
+                                <div class="justify-start items-start gap-5 flex">
+                                    <div
+                                        class="w-[60px] bg-white rounded-[10px] justify-center items-center flex overflow-hidden">
+                                        <img class="w-[60px] h-[60px]" src="./asset/recentplayimg1.png" />
+                                    </div>
+                                    <div class="flex-col justify-start items-start inline-flex">
+                                        <div class="text-white text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Setting Up Our Beds In Minecraft</div>
+                                        <div class="text-gray-400 text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Sleepy Fish</div>
+                                    </div>
+                                </div>
+                                <div class="justify-start items-center gap-5 flex">
+                                    <div class="justify-start items-center gap-[7px] flex">
+                                        <div data-svg-wrapper>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6.625 11.125H6.0625C4.81973 11.125 3.8125 12.134 3.8125 13.3792V15.6208C3.8125 16.8657 4.81973 17.875 6.0625 17.875H6.625C7.24621 17.875 7.75 17.3702 7.75 16.7479V12.2521C7.75 11.6295 7.24621 11.125 6.625 11.125ZM13.9375 11.125H13.375C12.7538 11.125 12.25 11.6295 12.25 12.2521V16.7479C12.25 17.3702 12.7538 17.875 13.375 17.875H13.9375C15.1803 17.875 16.1875 16.8657 16.1875 15.6208V13.3792C16.1875 12.1343 15.1803 11.125 13.9375 11.125ZM10 2.125C4.96949 2.125 1.16066 6.31316 1 11.125V15.0625C1 15.3733 1.25172 15.625 1.5625 15.625H2.125C2.43578 15.625 2.6875 15.3733 2.6875 15.0625V11.125C2.6875 7.09363 5.96863 3.81953 10 3.81883C14.0314 3.81953 17.3125 7.09363 17.3125 11.125V15.0625C17.3125 15.3733 17.5642 15.625 17.875 15.625H18.4375C18.7483 15.625 19 15.3733 19 15.0625V11.125C18.8393 6.31316 15.0305 2.125 10 2.125Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                        <div class="text-white text-lg font-bold font-['DM Sans'] leading-[27px]">
+                                            311k
+                                        </div>
+                                    </div>
+                                    <div data-svg-wrapper>
+                                        <svg width="122" height="64" viewBox="0 0 122 64" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1" y="1" width="120" height="62" rx="31" stroke="#333333"
+                                                stroke-width="2" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M24.09 25.965C25.0277 25.0277 26.2992 24.5011 27.625 24.5011C28.9509 24.5011 30.2224 25.0277 31.16 25.965L32.625 27.4288L34.09 25.965C34.5513 25.4875 35.103 25.1065 35.713 24.8445C36.323 24.5825 36.9791 24.4445 37.643 24.4388C38.3069 24.433 38.9653 24.5595 39.5798 24.8109C40.1943 25.0623 40.7525 25.4336 41.222 25.903C41.6915 26.3725 42.0627 26.9308 42.3141 27.5452C42.5655 28.1597 42.6921 28.8181 42.6863 29.482C42.6805 30.1459 42.5426 30.802 42.2805 31.412C42.0185 32.0221 41.6376 32.5738 41.16 33.035L32.625 41.5713L24.09 33.035C23.1527 32.0974 22.6261 30.8258 22.6261 29.5C22.6261 28.1742 23.1527 26.9026 24.09 25.965V25.965Z"
+                                                fill="#2BD268" />
+                                            <path
+                                                d="M88.572 22.4905L98.829 29.3306C99.2684 29.6236 99.6287 30.0238 99.8779 30.4894C100.127 30.9551 100.257 31.4751 100.257 32.0032C100.257 32.5313 100.127 33.0513 99.8779 33.5169C99.6287 33.9826 99.2684 34.3795 98.829 34.6725L88.572 41.5127C88.0888 41.8351 87.5272 42.0202 86.947 42.0484C86.3668 42.0766 85.7899 41.9467 85.2778 41.6727C84.7656 41.3987 84.3375 40.9908 84.039 40.4925C83.7405 39.9942 83.5829 39.4242 83.583 38.8434V25.1662C83.5818 24.5848 83.7385 24.014 84.0365 23.5148C84.3345 23.0156 84.7626 22.6068 85.2749 22.332C85.7873 22.0572 86.3647 21.9268 86.9454 21.9547C87.5261 21.9826 88.0883 22.1678 88.572 22.4905Z"
+                                                fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M116.677 43.05C118.128 39.5467 118.875 35.7919 118.875 32C118.875 24.3419 115.833 16.9974 110.418 11.5823C105.003 6.16718 97.6581 3.125 90 3.125C82.3419 3.125 74.9974 6.16718 69.5823 11.5823C64.1672 16.9974 61.125 24.3419 61.125 32C61.125 35.7919 61.8719 39.5467 63.323 43.05C64.7741 46.5533 66.901 49.7364 69.5823 52.4177C72.2636 55.099 75.4467 57.2259 78.95 58.677C82.4533 60.1281 86.2081 60.875 90 60.875C93.7919 60.875 97.5467 60.1281 101.05 58.677C104.553 57.2259 107.736 55.099 110.418 52.4177C113.099 49.7364 115.226 46.5533 116.677 43.05Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="w-[621px] justify-between items-center inline-flex">
+                                <div class="justify-start items-start gap-5 flex">
+                                    <div
+                                        class="w-[60px] bg-white rounded-[10px] justify-center items-center flex overflow-hidden">
+                                        <img class="w-[60px] h-[60px]" src="./asset/recentplayimg1.png" />
+                                    </div>
+                                    <div class="flex-col justify-start items-start inline-flex">
+                                        <div class="text-white text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Setting Up Our Beds In Minecraft</div>
+                                        <div class="text-gray-400 text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Sleepy Fish</div>
+                                    </div>
+                                </div>
+                                <div class="justify-start items-center gap-5 flex">
+                                    <div class="justify-start items-center gap-[7px] flex">
+                                        <div data-svg-wrapper>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6.625 11.125H6.0625C4.81973 11.125 3.8125 12.134 3.8125 13.3792V15.6208C3.8125 16.8657 4.81973 17.875 6.0625 17.875H6.625C7.24621 17.875 7.75 17.3702 7.75 16.7479V12.2521C7.75 11.6295 7.24621 11.125 6.625 11.125ZM13.9375 11.125H13.375C12.7538 11.125 12.25 11.6295 12.25 12.2521V16.7479C12.25 17.3702 12.7538 17.875 13.375 17.875H13.9375C15.1803 17.875 16.1875 16.8657 16.1875 15.6208V13.3792C16.1875 12.1343 15.1803 11.125 13.9375 11.125ZM10 2.125C4.96949 2.125 1.16066 6.31316 1 11.125V15.0625C1 15.3733 1.25172 15.625 1.5625 15.625H2.125C2.43578 15.625 2.6875 15.3733 2.6875 15.0625V11.125C2.6875 7.09363 5.96863 3.81953 10 3.81883C14.0314 3.81953 17.3125 7.09363 17.3125 11.125V15.0625C17.3125 15.3733 17.5642 15.625 17.875 15.625H18.4375C18.7483 15.625 19 15.3733 19 15.0625V11.125C18.8393 6.31316 15.0305 2.125 10 2.125Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                        <div class="text-white text-lg font-bold font-['DM Sans'] leading-[27px]">
+                                            311k
+                                        </div>
+                                    </div>
+                                    <div data-svg-wrapper>
+                                        <svg width="122" height="64" viewBox="0 0 122 64" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1" y="1" width="120" height="62" rx="31" stroke="#333333"
+                                                stroke-width="2" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M24.09 25.965C25.0277 25.0277 26.2992 24.5011 27.625 24.5011C28.9509 24.5011 30.2224 25.0277 31.16 25.965L32.625 27.4288L34.09 25.965C34.5513 25.4875 35.103 25.1065 35.713 24.8445C36.323 24.5825 36.9791 24.4445 37.643 24.4388C38.3069 24.433 38.9653 24.5595 39.5798 24.8109C40.1943 25.0623 40.7525 25.4336 41.222 25.903C41.6915 26.3725 42.0627 26.9308 42.3141 27.5452C42.5655 28.1597 42.6921 28.8181 42.6863 29.482C42.6805 30.1459 42.5426 30.802 42.2805 31.412C42.0185 32.0221 41.6376 32.5738 41.16 33.035L32.625 41.5713L24.09 33.035C23.1527 32.0974 22.6261 30.8258 22.6261 29.5C22.6261 28.1742 23.1527 26.9026 24.09 25.965V25.965Z"
+                                                fill="#2BD268" />
+                                            <path
+                                                d="M88.572 22.4905L98.829 29.3306C99.2684 29.6236 99.6287 30.0238 99.8779 30.4894C100.127 30.9551 100.257 31.4751 100.257 32.0032C100.257 32.5313 100.127 33.0513 99.8779 33.5169C99.6287 33.9826 99.2684 34.3795 98.829 34.6725L88.572 41.5127C88.0888 41.8351 87.5272 42.0202 86.947 42.0484C86.3668 42.0766 85.7899 41.9467 85.2778 41.6727C84.7656 41.3987 84.3375 40.9908 84.039 40.4925C83.7405 39.9942 83.5829 39.4242 83.583 38.8434V25.1662C83.5818 24.5848 83.7385 24.014 84.0365 23.5148C84.3345 23.0156 84.7626 22.6068 85.2749 22.332C85.7873 22.0572 86.3647 21.9268 86.9454 21.9547C87.5261 21.9826 88.0883 22.1678 88.572 22.4905Z"
+                                                fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M116.677 43.05C118.128 39.5467 118.875 35.7919 118.875 32C118.875 24.3419 115.833 16.9974 110.418 11.5823C105.003 6.16718 97.6581 3.125 90 3.125C82.3419 3.125 74.9974 6.16718 69.5823 11.5823C64.1672 16.9974 61.125 24.3419 61.125 32C61.125 35.7919 61.8719 39.5467 63.323 43.05C64.7741 46.5533 66.901 49.7364 69.5823 52.4177C72.2636 55.099 75.4467 57.2259 78.95 58.677C82.4533 60.1281 86.2081 60.875 90 60.875C93.7919 60.875 97.5467 60.1281 101.05 58.677C104.553 57.2259 107.736 55.099 110.418 52.4177C113.099 49.7364 115.226 46.5533 116.677 43.05Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="w-[621px] justify-between items-center inline-flex">
+                                <div class="justify-start items-start gap-5 flex">
+                                    <div
+                                        class="w-[60px] bg-white rounded-[10px] justify-center items-center flex overflow-hidden">
+                                        <img class="w-[60px] h-[60px]" src="./asset/recentplayimg1.png" />
+                                    </div>
+                                    <div class="flex-col justify-start items-start inline-flex">
+                                        <div class="text-white text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Setting Up Our Beds In Minecraft</div>
+                                        <div class="text-gray-400 text-lg font-medium font-['DM Sans'] leading-[27px]">
+                                            Sleepy Fish</div>
+                                    </div>
+                                </div>
+                                <div class="justify-start items-center gap-5 flex">
+                                    <div class="justify-start items-center gap-[7px] flex">
+                                        <div data-svg-wrapper>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6.625 11.125H6.0625C4.81973 11.125 3.8125 12.134 3.8125 13.3792V15.6208C3.8125 16.8657 4.81973 17.875 6.0625 17.875H6.625C7.24621 17.875 7.75 17.3702 7.75 16.7479V12.2521C7.75 11.6295 7.24621 11.125 6.625 11.125ZM13.9375 11.125H13.375C12.7538 11.125 12.25 11.6295 12.25 12.2521V16.7479C12.25 17.3702 12.7538 17.875 13.375 17.875H13.9375C15.1803 17.875 16.1875 16.8657 16.1875 15.6208V13.3792C16.1875 12.1343 15.1803 11.125 13.9375 11.125ZM10 2.125C4.96949 2.125 1.16066 6.31316 1 11.125V15.0625C1 15.3733 1.25172 15.625 1.5625 15.625H2.125C2.43578 15.625 2.6875 15.3733 2.6875 15.0625V11.125C2.6875 7.09363 5.96863 3.81953 10 3.81883C14.0314 3.81953 17.3125 7.09363 17.3125 11.125V15.0625C17.3125 15.3733 17.5642 15.625 17.875 15.625H18.4375C18.7483 15.625 19 15.3733 19 15.0625V11.125C18.8393 6.31316 15.0305 2.125 10 2.125Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                        <div class="text-white text-lg font-bold font-['DM Sans'] leading-[27px]">
+                                            311k
+                                        </div>
+                                    </div>
+                                    <div data-svg-wrapper>
+                                        <svg width="122" height="64" viewBox="0 0 122 64" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1" y="1" width="120" height="62" rx="31" stroke="#333333"
+                                                stroke-width="2" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M24.09 25.965C25.0277 25.0277 26.2992 24.5011 27.625 24.5011C28.9509 24.5011 30.2224 25.0277 31.16 25.965L32.625 27.4288L34.09 25.965C34.5513 25.4875 35.103 25.1065 35.713 24.8445C36.323 24.5825 36.9791 24.4445 37.643 24.4388C38.3069 24.433 38.9653 24.5595 39.5798 24.8109C40.1943 25.0623 40.7525 25.4336 41.222 25.903C41.6915 26.3725 42.0627 26.9308 42.3141 27.5452C42.5655 28.1597 42.6921 28.8181 42.6863 29.482C42.6805 30.1459 42.5426 30.802 42.2805 31.412C42.0185 32.0221 41.6376 32.5738 41.16 33.035L32.625 41.5713L24.09 33.035C23.1527 32.0974 22.6261 30.8258 22.6261 29.5C22.6261 28.1742 23.1527 26.9026 24.09 25.965V25.965Z"
+                                                fill="#2BD268" />
+                                            <path
+                                                d="M88.572 22.4905L98.829 29.3306C99.2684 29.6236 99.6287 30.0238 99.8779 30.4894C100.127 30.9551 100.257 31.4751 100.257 32.0032C100.257 32.5313 100.127 33.0513 99.8779 33.5169C99.6287 33.9826 99.2684 34.3795 98.829 34.6725L88.572 41.5127C88.0888 41.8351 87.5272 42.0202 86.947 42.0484C86.3668 42.0766 85.7899 41.9467 85.2778 41.6727C84.7656 41.3987 84.3375 40.9908 84.039 40.4925C83.7405 39.9942 83.5829 39.4242 83.583 38.8434V25.1662C83.5818 24.5848 83.7385 24.014 84.0365 23.5148C84.3345 23.0156 84.7626 22.6068 85.2749 22.332C85.7873 22.0572 86.3647 21.9268 86.9454 21.9547C87.5261 21.9826 88.0883 22.1678 88.572 22.4905Z"
+                                                fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M116.677 43.05C118.128 39.5467 118.875 35.7919 118.875 32C118.875 24.3419 115.833 16.9974 110.418 11.5823C105.003 6.16718 97.6581 3.125 90 3.125C82.3419 3.125 74.9974 6.16718 69.5823 11.5823C64.1672 16.9974 61.125 24.3419 61.125 32C61.125 35.7919 61.8719 39.5467 63.323 43.05C64.7741 46.5533 66.901 49.7364 69.5823 52.4177C72.2636 55.099 75.4467 57.2259 78.95 58.677C82.4533 60.1281 86.2081 60.875 90 60.875C93.7919 60.875 97.5467 60.1281 101.05 58.677C104.553 57.2259 107.736 55.099 110.418 52.4177C113.099 49.7364 115.226 46.5533 116.677 43.05Z"
+                                                stroke="white" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
                     </div>
                 </div>
             </div>
-        </main>
+    </div>
+    </div>
+
+    </div>
+    </main>
     </div>
 </body>
 
