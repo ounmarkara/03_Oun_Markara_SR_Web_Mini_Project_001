@@ -4,9 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeatBay - Music Streaming</title>
+    <title>BeatBay - Music Stream Web App</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -18,58 +22,68 @@
                         primary: '#1DB954',
                         secondary: '#b3b3b3',
                         'surface-low': '#282828',
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
+
 </head>
 
 <body class="bg-background text-white h-screen flex flex-col">
     <div class="flex-1 flex overflow-hidden">
         <!-- Left Sidebar -->
 
-        <aside class="w-60 border-r border-white/10 flex flex-col">
+        <aside class="w-60 border-r border-white/10 flex flex-col ">
             <div class="p-6">
-                <img src="./asset/Logo.png" alt="BeatBay Logo" class="h-8 mb-8">
+                <img src="../asset/Logo.png" alt="BeatBay Logo" class="h-8 mb-8">
                 <nav class="space-y-2">
-                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-md bg-white/10">
+                    <a href="./Home.html" class="flex items-center gap-3 px-3 py-2 rounded-md bg-white/10">
                         <i class="ri-home-line text-xl text-accent"></i>
                         <span>Home</span>
                     </a>
-                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white/10">
-                        <i class="ri-compass-3-line text-xl text-muted"></i>
+                    <a href="./Broswer.html" class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white/10">
+                        <i class="fa-brands fa-discourse"></i>
                         <span class="text-muted">Discover</span>
                     </a>
                     <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white/10">
-                        <i class="ri-radio-2-line text-xl text-muted"></i>
+                        <i class="fa-solid fa-radio"></i>
                         <span class="text-muted">Radio</span>
                     </a>
-                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white/10">
-                        <i class="ri-radio-2-line text-xl text-muted"></i>
-                        <span class="text-muted">Radio</span>
+                    <a href="./PlayList ForYou.html"
+                        class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white/10">
+                        <i class="fa-solid fa-music"></i>
+                        <span class="text-muted">Album</span>
                     </a>
-                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white/10">
-                        <i class="ri-radio-2-line text-xl text-muted"></i>
-                        <span class="text-muted">Radio</span>
+                    <a href="./Comunity.html" class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white/10">
+                        <i class="fa-solid fa-microphone-lines"></i>
+                        <span class="text-muted">Podcast</span>
                     </a>
                 </nav>
             </div>
 
             <div class="mt-4">
-                <h3 class="px-6 mb-2 text-xs font-semibold text-muted uppercase">Library</h3>
+                <div>
+                    <div class="flex gap-[100px]">
+                        <h3 class="px-6 mb-2 text-xs font-semibold text-muted uppercase gap-5">Library</h3>
+                        <i class="fas fa-plus-square"></i>
+                    </div>
+                </div>
                 <nav class="space-y-1">
                     <a href="#" class="flex items-center gap-3 px-6 py-2 hover:bg-white/10">
-                        <i class="ri-history-line text-xl text-muted"></i>
+                        <i class="ri-history-line text-xl"></i>
                         <span class="text-muted">Recently Added</span>
                     </a>
                     <a href="#" class="flex items-center gap-3 px-6 py-2 hover:bg-white/10">
-                        <i class="ri-heart-line text-xl text-muted"></i>
+                        <i class="fa-solid fa-heart"></i>
                         <span class="text-muted">Favorite Songs</span>
                     </a>
                     <a href="#" class="flex items-center gap-3 px-6 py-2 hover:bg-white/10">
-                        <i class="ri-heart-line text-xl text-muted"></i>
-                        <span class="text-muted">Favorite Songs</span>
+                        <i class="fa-solid fa-folder"></i>
+                        <span class="text-muted">Local Files</span>
                     </a>
                 </nav>
             </div>
@@ -78,16 +92,16 @@
                 <h3 class="px-6 mb-2 text-xs font-semibold text-muted uppercase">Playlist</h3>
                 <nav class="space-y-1">
                     <a href="#" class="flex items-center gap-3 px-6 py-2 hover:bg-white/10">
-                        <i class="ri-music-line text-xl text-muted"></i>
+                        <i class="ri-music-line text-xl"></i>
                         <span class="text-muted">Lo-fi Music</span>
                     </a>
                     <a href="#" class="flex items-center gap-3 px-6 py-2 hover:bg-white/10">
-                        <i class="ri-music-line text-xl text-muted"></i>
-                        <span class="text-muted">Lo-fi Music</span>
+                        <i class="ri-music-line text-xl"></i>
+                        <span class="text-muted">Best of Bon Jovi</span>
                     </a>
                     <a href="#" class="flex items-center gap-3 px-6 py-2 hover:bg-white/10">
-                        <i class="ri-music-line text-xl text-muted"></i>
-                        <span class="text-muted">Lo-fi Music</span>
+                        <i class="ri-music-line text-xl"></i>
+                        <span class="text-muted">Best of Jonh Mayer</span>
                     </a>
                 </nav>
             </div>
@@ -100,11 +114,11 @@
             <header class="h-16 flex items-center gap-20 px-6 sticky top-0 bg-background/90 backdrop-blur-sm z-10">
                 <div class="flex items-center gap-2">
                     <button class="p-2 rounded-full hover:bg-white/10">
-                        <i class="ri-arrow-left-s-line text-xl"></i>
+                        <a href="./Home.html"><i class="ri-arrow-left-s-line text-xl"></i></a>
                     </button>
 
                     <button class="p-2 rounded-full hover:bg-white/10">
-                        <i class="ri-arrow-right-s-line text-xl"></i>
+                        <a href="./Comunity.html"><i class="ri-arrow-right-s-line text-xl"></i></a>
                     </button>
 
                 </div>
@@ -120,94 +134,127 @@
 
             </header>
 
-            <h1 class="text-3xl font-bold mb-6">Good afternoon</h1>
-
-            <div class="grid grid-cols-2 gap-4 mb-8">
-                <div class="bg-surface-low rounded-md flex items-center p-4">
-                    <img src="./asset/img-page1.jpg" alt="Urdunama" class="w-16 h-16 mr-4">
-                    <span class="font-semibold">Urdunama</span>
-                </div>
-                <div class="bg-surface-low rounded-md flex items-center p-4">
-                    <img src="./asset/img-page2.jpg" alt="Lenny's Podcast" class="w-16 h-16 mr-4">
-                    <span class="font-semibold">Lenny's Podcast: Product | Growth | Career</span>
-                </div>
-                <div class="bg-surface-low rounded-md flex items-center p-4">
-                    <img src="./asset/img-page3.jpg" alt="Conversations with Tyler" class="w-16 h-16 mr-4">
-                    <span class="font-semibold">Conversations with Tyler</span>
-                </div>
-                <div class="bg-surface-low rounded-md flex items-center p-4">
-                    <img src="./asset/img-page-4.jpg" alt="New York" class="w-16 h-16 mr-4">
-                    <span class="font-semibold">New York</span>
+            <div class="flex flex-col p-5">
+                <h3 class="text-3xl font-bold mb-6">Good afternoon</h3>
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="bg-surface-low rounded-md flex items-center p-4">
+                        <img src="../asset/img-page1.jpg" alt="Urdunama" class="w-16 h-16 mr-4">
+                        <span class="font-semibold">Urdunama</span>
+                    </div>
+                    <div class="bg-surface-low rounded-md flex items-center p-4">
+                        <img src="../asset/img-page2.jpg" alt="Lenny's Podcast" class="w-16 h-16 mr-4">
+                        <span class="font-semibold">Lenny's Podcast: Product | Growth | Career</span>
+                    </div>
+                    <div class="bg-surface-low rounded-md flex items-center p-4">
+                        <img src="../asset/img-page3.jpg" alt="Conversations with Tyler" class="w-16 h-16 mr-4">
+                        <span class="font-semibold">Conversations with Tyler</span>
+                    </div>
+                    <div class="bg-surface-low rounded-md flex items-center p-4">
+                        <img src="../asset/img-page-4.jpg" alt="New York" class="w-16 h-16 mr-4">
+                        <span class="font-semibold">New York</span>
+                    </div>
                 </div>
             </div>
 
-            <h2 class="text-2xl font-bold mb-4">Episode For You</h2>
 
-            <!-- scroll x auto -->
 
-            <div class="flex overflow-x-auto pb-10 gap-5 [scrollbar-width:none] [-ms-overflow-style:none]">
-                <div class="bg-surface-low p-4 rounded-md shrink-0 w-64 snap-start">
-                    <img src="./asset/horizon-img1.jpg" alt="Every Parent's Nightmare"
-                        class="w-full aspect-square object-cover mb-4 rounded">
-                    <h3 class="font-semibold mb-1">Every Parent's Nightmare</h3>
-                    <p class="text-sm text-secondary">Sep 2022 • 36 Min</p>
-                </div>
-                <div class="bg-surface-low p-4 rounded-md shrink-0 w-64 snap-start">
-                    <img src="./asset/horizon-img1.jpg" alt="Every Parent's Nightmare"
-                        class="w-full aspect-square object-cover mb-4 rounded">
-                    <h3 class="font-semibold mb-1">Every Parent's Nightmare</h3>
-                    <p class="text-sm text-secondary">Sep 2022 • 36 Min</p>
-                </div>
-                <div class="bg-surface-low p-4 rounded-md shrink-0 w-64 snap-start">
-                    <img src="./asset/horizon-img1.jpg" alt="Every Parent's Nightmare"
-                        class="w-full aspect-square object-cover mb-4 rounded">
-                    <h3 class="font-semibold mb-1">Every Parent's Nightmare</h3>
-                    <p class="text-sm text-secondary">Sep 2022 • 36 Min</p>
-                </div>
-                <div class="bg-surface-low p-4 rounded-md shrink-0 w-64 snap-start">
-                    <img src="./asset/horizon-img2.jpg" alt="How the Pell Grant helped"
-                        class="w-full aspect-square object-cover mb-4 rounded">
-                    <h3 class="font-semibold mb-1">How the Pell Grant helped</h3>
-                    <p class="text-sm text-secondary">Sep 2022 • 29 Min</p>
-                </div>
-                <div class="bg-surface-low p-4 rounded-md shrink-0 w-64 snap-start">
-                    <img src="./asset/horizon-img3.jpg" alt="After 10 Years"
-                        class="w-full aspect-square object-cover mb-4 rounded">
-                    <h3 class="font-semibold mb-1">After 10 Years</h3>
-                    <p class="text-sm text-secondary">Jul 2022 • 62 Min</p>
-                </div>
-                <div class="bg-surface-low p-4 rounded-md shrink-0 w-64 snap-start">
-                    <img src="./asset/horizon-img5.jpg" alt="Book Exploder"
-                        class="w-full aspect-square object-cover mb-4 rounded">
-                    <h3 class="font-semibold mb-1">Book Exploder</h3>
-                    <p class="text-sm text-secondary">Aug 2022 • 45 Min</p>
+            <div class="p-5">
+                <h2 class="text-2xl font-bold mb-4">Episode For You</h2>
+
+                <!-- scroll x auto -->
+
+                <div class="flex overflow-x-auto p-[16px] gap-5 [scrollbar-width:none] [-ms-overflow-style:none]">
+                    <div class="bg-surface-low p-4 rounded-md shrink-0 w-64 snap-start">
+                        <img src="../asset/horizon-img1.jpg" alt="Every Parent's Nightmare"
+                            class="w-full aspect-square object-cover mb-4 rounded">
+                        <h3 class="font-semibold mb-1">Every Parent's Nightmare</h3>
+                        <p class="text-sm text-secondary">Sep 2022 • 36 Min</p>
+                    </div>
+                    <div class="bg-surface-low p-4 rounded-md shrink-0 w-64 snap-start">
+                        <img src="../asset/horizon-img1.jpg" alt="Every Parent's Nightmare"
+                            class="w-full aspect-square object-cover mb-4 rounded">
+                        <h3 class="font-semibold mb-1">Every Parent's Nightmare</h3>
+                        <p class="text-sm text-secondary">Sep 2022 • 36 Min</p>
+                    </div>
+                    <div class="bg-surface-low p-4 rounded-md shrink-0 w-64 snap-start">
+                        <img src="../asset/horizon-img1.jpg" alt="Every Parent's Nightmare"
+                            class="w-full aspect-square object-cover mb-4 rounded">
+                        <h3 class="font-semibold mb-1">Every Parent's Nightmare</h3>
+                        <p class="text-sm text-secondary">Sep 2022 • 36 Min</p>
+                    </div>
+                    <div class="bg-surface-low p-4 rounded-md shrink-0 w-64 snap-start">
+                        <img src="../asset/horizon-img2.jpg" alt="How the Pell Grant helped"
+                            class="w-full aspect-square object-cover mb-4 rounded">
+                        <h3 class="font-semibold mb-1">How the Pell Grant helped</h3>
+                        <p class="text-sm text-secondary">Sep 2022 • 29 Min</p>
+                    </div>
+                    <div class="bg-surface-low p-4 rounded-md shrink-0 w-64 snap-start">
+                        <img src="../asset/horizon-img3.jpg" alt="After 10 Years"
+                            class="w-full aspect-square object-cover mb-4 rounded">
+                        <h3 class="font-semibold mb-1">After 10 Years</h3>
+                        <p class="text-sm text-secondary">Jul 2022 • 62 Min</p>
+                    </div>
+                    <div class="bg-surface-low p-4 rounded-md shrink-0 w-64 snap-start">
+                        <img src="../asset/horizon-img5.jpg" alt="Book Exploder"
+                            class="w-full aspect-square object-cover mb-4 rounded">
+                        <h3 class="font-semibold mb-1">Book Exploder</h3>
+                        <p class="text-sm text-secondary">Aug 2022 • 45 Min</p>
+                    </div>
                 </div>
             </div>
 
         </main>
 
         <!-- Right Sidebar -->
-        <aside class="w-64 bg-surface p-6">
-            <h2 class="text-xl font-bold mb-4">Mi Friends</h2>
+
+        <aside class="w-64 bg-surface p-[20px] gap-[30px]">
+            <h2 class="text-xl font-bold mb-4 ">Mi Friends</h2>
             <div class="space-y-4">
-                <div class="flex items-center gap-3">
-                    <img src="./asset/friend activity/friend -img1.png" alt="Kathryn Murphy"
+                <div class="flex items-center gap-5">
+                    <img src="../asset/friend activity/friend -img1.png" alt="Kathryn Murphy"
                         class="w-10 h-10 rounded-full">
                     <div>
                         <p class="font-semibold">Kathryn Murphy</p>
                         <p class="text-sm text-primary">Listening: Gavin Mikhail</p>
                     </div>
                 </div>
-                <div class="flex items-center gap-3">
-                    <img src="./asset/friend activity/friend -img2.png" alt="Bessie Cooper"
+                <div class="flex items-center gap-5">
+                    <img src="../asset/friend activity/friend -img2.png" alt="Bessie Cooper"
                         class="w-10 h-10 rounded-full">
                     <div>
                         <p class="font-semibold">Bessie Cooper</p>
                         <p class="text-sm text-orange-500">Absent</p>
                     </div>
                 </div>
-                <div class="flex items-center gap-3">
-                    <img src="./asset/friend activity/friend -img3.png" alt="Jane Cooper"
+                <div class="flex items-center gap-5">
+                    <img src="../asset/friend activity/friend -img3.png" alt="Jane Cooper"
+                        class="w-10 h-10 rounded-full">
+                    <div>
+                        <p class="font-semibold">Jane Cooper</p>
+                        <p class="text-sm text-primary">Listening: C4C</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-5">
+                    <img src="../asset/friend activity/friend -img4.png" alt="Jane Cooper"
+                        class="w-10 h-10 rounded-full">
+                    <div>
+                        <p class="font-semibold">Jane Cooper</p>
+                        <p class="text-sm text-primary">Listening: C4C</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-5">
+                    <img src="../asset/friend activity/friend -img5.png" alt="Jane Cooper"
+                        class="w-10 h-10 rounded-full">
+                    <div>
+                        <p class="font-semibold">Jane Cooper</p>
+                        <p class="text-sm text-primary">Listening: C4C</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-5">
+                    <img src="../asset/friend activity/friend -img6.png" alt="Jane Cooper"
                         class="w-10 h-10 rounded-full">
                     <div>
                         <p class="font-semibold">Jane Cooper</p>
@@ -216,34 +263,7 @@
                 </div>
 
                 <div class="flex items-center gap-3">
-                    <img src="./asset/friend activity/friend -img4.png" alt="Jane Cooper"
-                        class="w-10 h-10 rounded-full">
-                    <div>
-                        <p class="font-semibold">Jane Cooper</p>
-                        <p class="text-sm text-primary">Listening: C4C</p>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-3">
-                    <img src="./asset/friend activity/friend -img5.png" alt="Jane Cooper"
-                        class="w-10 h-10 rounded-full">
-                    <div>
-                        <p class="font-semibold">Jane Cooper</p>
-                        <p class="text-sm text-primary">Listening: C4C</p>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-3">
-                    <img src="./asset/friend activity/friend -img6.png" alt="Jane Cooper"
-                        class="w-10 h-10 rounded-full">
-                    <div>
-                        <p class="font-semibold">Jane Cooper</p>
-                        <p class="text-sm text-primary">Listening: C4C</p>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-3">
-                    <img src="./asset/friend activity/friend -img7.png" alt="Jane Cooper"
+                    <img src="../asset/friend activity/friend -img7.png" alt="Jane Cooper"
                         class="w-10 h-10 rounded-full">
                     <div>
                         <p class="font-semibold">Jane Cooper</p>
@@ -261,7 +281,7 @@
     <!-- Player Bar -->
     <footer class="h-20 bg-surface-low border-t border-gray-700 px-4 flex items-center">
         <div class="flex items-center gap-4 w-1/4">
-            <img src="./asset/recentplayimg1.png" alt="Shape of You" class="w-14 h-14 rounded">
+            <img src="../asset/recentplayimg1.png" alt="Shape of You" class="w-14 h-14 rounded">
             <div>
                 <h4 class="font-medium">Shape of You</h4>
                 <p class="text-sm text-secondary">Ed Sheeran</p>
